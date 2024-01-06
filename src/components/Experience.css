@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.work {
+    background-color: #F5F5F5;
+}
+
+.credentials {
+    background-color: #F5FFFA;
+}
+
+.text-container {
+    margin: 0 20px;
+}
+
+.circle-list {
+    list-style-type: circle;
+    margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.experience-item {
+    margin-bottom: 20px; /* Adjust the margin between items as needed */
+}
+
+.role-title {
+    margin-top: 20px; /* Add space above the role title */
+}
+
+.date {
+    float: right;
+}
+
+@media only screen and (max-width: 1000px) {
+    .role-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .date {
+        float: none;
+    }
+}
