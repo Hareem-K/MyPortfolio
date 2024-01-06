@@ -37,12 +37,12 @@
 .nav-menu {
   display: grid;
   grid-template-columns: repeat(10, auto);
-  grid-gap: 80px;
+  grid-gap: 10px;
   list-style: none;
   text-align: center;
   width: 60vw;
   justify-content: end;
-  margin-right: 2rem;
+  margin-right: 1rem;
   margin-left: 20rem;
 }
 
@@ -103,7 +103,8 @@
 
   .nav-links {
     text-align: center;
-    padding: 2rem;
+    margin: 0.5rem 4; /* Adjust the margin to control overall vertical spacing */
+    padding: 0rem 2rem;
     width: 100%;
     display: table;
   }
