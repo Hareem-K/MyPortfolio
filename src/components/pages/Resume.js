@@ -13,7 +13,7 @@ export default function Resume() {
       <h1 className='resume'>RESUME</h1>
       <img className='resumeImage' src="images/resume.jpg" alt="Resume" />
 
-      <div style={{ display: 'flex', justifyContent: 'center', paddingBottom: '50px', maxWidth: '197px', margin: '0 auto' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', paddingBottom: '50px', paddingTop: '30px', maxWidth: '197px', margin: '0 auto' }}>
         <Button className='btns' buttonStyle='btn--download' buttonSize='btn--large' linkTo={downloadLink} external>
           DOWNLOAD <i className='fas fa-download' />
         </Button>

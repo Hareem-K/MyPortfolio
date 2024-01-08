@@ -18,7 +18,7 @@
 }
 
 .resume {
-  background-image: url('/public/images/img-3.jpg');
+  background-image: url('/public/images/title2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@
 }
 
 .projects {
-  background-image: url('/public/images/img-1.jpg');
+  background-image: url('/public/images/title4.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -36,16 +36,16 @@
 }
 
 .experience {
-  background-image: url('/public/images/img-9.jpg');
+  background-image: url('/public/images/title12.jpg');
   background-position: center;
-  background-size: fill;
+  background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
 }
 
 .contact {
-  background-image: url('/public/images/img-6.jpg');
+  background-image: url('/public/images/title6.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

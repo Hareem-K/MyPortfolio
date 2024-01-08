@@ -19,7 +19,6 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>Contact</h2>
-            <Link to='/contact'>Contact Page</Link>
             <Link to={"mailto:hareemkhan@gmail.com"}>Email</Link>
             <Link to='https://www.linkedin.com/in/hareemzkhan' target='_blank' rel='noopener noreferrer'>LinkedIn</Link>
             <Link to='https://github.com/Hareem-K' target='_blank' rel='noopener noreferrer'>Github</Link>
@@ -33,7 +32,7 @@ function Footer() {
                     HK <i className='fab fa-typo3'></i>
                 </Link>
             </div>
-            <small className='website-rights'>HK © 2023</small>
+            <small className='website-rights'>HK © 2024</small>
             <div className='social-icons'>
             <Link
               className='social-icon-link mail'

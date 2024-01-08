@@ -8,6 +8,14 @@ function ProjectCards() {
       <h1>Click on a Card to View the Github Repository!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
+          <ul className='cards__items'>
+                <CardItem
+                src="images/project.png"
+                text="This website was developed using React.js and CSS to showcase a compilation of my projects, experiences, and achievements in one place. Explore the GitHub repository to gain insights into the development process."
+                label='Portfolio Website'
+                path='https://github.com/Hareem-K/MyPortfolio'
+                />
+            </ul>
             <ul className='cards__items'>
                 <CardItem
                 src="images/airline.jpg"
@@ -60,7 +68,7 @@ function ProjectCards() {
                 />
                 <CardItem
                 src="images/threatened.png"
-                text="Developed the final project for ENDG 233, Programming with Data, resulting in a sophisticated terminal-based application designed to process and visualize threatened species data. Leveraging CSV files and user input, this application seamlessly prompts users to input a country name and make subsequent choices regarding whether to display corresponding average, density, or total threatened species data from the selected country. The integration of Matplotlib enriches the user experience by generating informative plots showcasing the relevant data. This project not only highlights proficiency in programming with data but also demonstrates the ability to create a user-friendly and data-driven application catering to specific user queries within a terminal environment."
+                text="Developed the final project for ENDG 233, Programming with Data, resulting in a sophisticated terminal-based python application designed to process and visualize threatened species data. Leveraging CSV files and user input, this application seamlessly prompts users to input a country name and make subsequent choices regarding whether to display corresponding average, density, or total threatened species data from the selected country. The integration of Matplotlib enriches the user experience by generating informative plots showcasing the relevant data. This project not only highlights proficiency in programming with data but also demonstrates the ability to create a user-friendly and data-driven application catering to specific user queries within a terminal environment."
                 label='Threatened Species Info Application'
                 path='https://github.com/Hareem-K/Threatened-Species-Info-Application'
                 />

@@ -3,5 +3,8 @@
     width: 1000px;
     display: block;
     margin: 0 auto;   
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    margin-top: 20px;
 
 }
+
