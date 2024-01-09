@@ -77,7 +77,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .NavbarItems {
+  .navbar {
     position: relative;
   }
 
@@ -88,7 +88,7 @@
     height: 90vh;
     position: absolute;
     top: 80px;
-    left: -100%;
+    left: -111%;
     opacity: 1;
     transition: all 0.5s ease;
   }

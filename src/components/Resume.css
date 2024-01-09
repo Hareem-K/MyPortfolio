@@ -1,6 +1,6 @@
 .resumeImage {
-    height: 1000px;
-    width: 1000px;
+    max-width: 100%; /* Set maximum width to 100% of the parent container */
+    height: auto;    /* Maintain aspect ratio while adjusting width */
     display: block;
     margin: 0 auto;   
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);

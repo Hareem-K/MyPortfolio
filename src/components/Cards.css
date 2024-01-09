@@ -64,10 +64,10 @@
     margin-left: 10px;
     padding: 6px 8px;
     max-width: calc((100%) - 60px);
-    font-size: 12px;
+    font-size: 20px !important;
     font-weight: 700;
     color: #fff;
-    background-color: #1f98f4;
+    background-color: #452c63 !important;
     box-sizing: border-box;
   }
   
