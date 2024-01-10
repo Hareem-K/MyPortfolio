@@ -70,8 +70,8 @@ export default function Experience() {
                         </ul>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'center', maxWidth: '217px', margin: '0 auto', marginTop: '10px' }}>
-                        <Button className='btns' buttonStyle='btn--download' buttonSize='btn--large' linkTo={"https://www.google.ca/"} external>
-                        View Credential <i className='fas fa-arrow-right' />
+                        <Button className='btns' buttonStyle='btn--download' buttonSize='btn--large' linkTo={"/"} external>
+                        Credential in Progress <i className='fas fa-arrow-right' />
                         </Button>
                     </div>
                 </div>
