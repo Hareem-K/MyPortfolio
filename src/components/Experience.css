@@ -12,7 +12,8 @@ body {
 }
 
 .credentials {
-    background-color: #F5FFFA;
+    /* background-color: #F5FFFA; */
+    background-color: rgb(247, 247, 255);
 }
 
 .text-container {
