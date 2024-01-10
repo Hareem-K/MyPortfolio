@@ -47,6 +47,7 @@ function ProjectCards() {
                 text="Participated in the development of a comprehensive note-taking application as part of the ENSF 381 course, focused on Full Stack Web Development. This project involved the creation of a robust full-stack note-taking app, providing users with the capability to sign in through Google for seamless note creation, editing, and deletion. Leveraging Google Cloud for authentication, Netlify was employed for efficient site deployment. The implementation of Terraform facilitated the creation of essential resources on AWS, complemented by Python-written lambda functions. This hands-on project not only honed skills in full-stack development but also showcased the integration of various technologies to deliver a secure and user-friendly note-taking experience."
                 label='Notes Application'
                 path='https://github.com/Hareem-K/Notes-App-Lotion-Plus'
+                openInNewTab={true}
                 />
             </ul>
             <ul className='cards__items'>
