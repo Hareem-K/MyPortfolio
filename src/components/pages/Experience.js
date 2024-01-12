@@ -224,9 +224,21 @@ export default function Experience() {
                             <>
                                 {/* W24 Courses */}
                                 <h2 className="role-title"> ENSF 400 | Software Engineering Industry Practices and Communication</h2>
+                                <ul className="circle-list">
+                                    <li>Continuation of professional skills within the field of software engineering. Application of common tools for efficient software practice, cloud, continuous integration, and deployment. Introduction to innovation and ethics in design and entrepreneurial mindset. Licensing, legal, and internationalization issues.</li>
+                                </ul>
                                 <h2 className="role-title"> SENG 401 | Software Architecture</h2>
+                                <ul className="circle-list">
+                                    <li>Software architectures and design for non-functional software properties. Introduction to program comprehension skills including analysis of existing architectures.</li>
+                                </ul>
                                 <h2 className="role-title"> ENSF 444 | Machine Learning Systems</h2>
+                                <ul className="circle-list">
+                                    <li>Techniques for extracting, cleaning, and visualizing data from engineering applications. Basic numerical computation techniques underlying learning algorithms. Fundamental supervised and unsupervised learning algorithms. Emphasis will be on leveraging existing software libraries and frameworks to solve problems in various engineering disciplines.</li>
+                                </ul>
                                 <h2 className="role-title"> SENG 438 | Software Testing, Reliability, and Quality</h2>
+                                <ul className="circle-list">
+                                    <li>Concepts, methods, techniques, processes, and tools for software testing. The principles, processes, and applications of software reliability and software quality assurance.</li>
+                                </ul>
                             </>
                         )}
 
@@ -237,9 +249,21 @@ export default function Experience() {
                             <>
                                 {/* F23 Courses */}
                                 <h2 className="role-title"> ENSF 480 | Principles of Software Design</h2>
+                                <ul className="circle-list">
+                                    <li>Brief overview of typical software development lifecycles. Systematic methods for designing large-scale, quality software. Concepts such as abstraction, modularity, and software modelling will be covered. Designing for non-functional properties of software will be introduced. Emphasis on individual skills.</li>
+                                </ul>
                                 <h2 className="role-title"> ENSF 462 | Networked Systems</h2>
+                                <ul className="circle-list">
+                                    <li>Fundamental principles of computer networks including layered protocol stacks. Socket programming. Programming frameworks for developing secure distributed systems. Introduction to principles of software-defined networks.</li>
+                                </ul>
                                 <h2 className="role-title"> ENSF 461 | Applied Operating Systems</h2>
-                                <h2 className="role-title"> SENG 460 | Embedded Software and Hardware Systems</h2>
+                                <ul className="circle-list">
+                                    <li>Fundamental principles of operating systems. Virtual memory and input/output. Processes, threads and CPU scheduling. Persistent storage. Concurrent programming techniques to address inter-process communication and synchronization. Discussion of security elements.</li>
+                                </ul>
+                                <h2 className="role-title"> ENSF 460 | Embedded Software and Hardware Systems</h2>
+                                <ul className="circle-list">
+                                    <li>Embedded real-time applications and operations. Computer architecture, microcontrollers and their instruction sets. Control and interfacing for robotics applications using common input/output devices, debugging and other software engineering practices. Strategies for interrupt handling and exception handling</li>
+                                </ul>
                             </>
                         )}
 
@@ -250,6 +274,9 @@ export default function Experience() {
                             <>
                                 {/* SU23 Courses */}
                                 <h2 className="role-title"> ENCM 369 | Computer organization</h2>
+                                <ul className="circle-list">
+                                    <li>Organization of a simple stored-program computer: CPU, busses and memory. Instruction sets, machine code, and assembly language. Conventions for assembly language generated by compilers. Floating-point number representation. Hardware organization. Address translation and virtual memory. Input/output devices, computer interfacing, interrupt handling and multi-tasking systems.</li>
+                                </ul>
                             </>
                         )}
 
@@ -260,6 +287,9 @@ export default function Experience() {
                             <>
                                 {/* Sp23 Courses */}
                                 <h2 className="role-title"> ENSF 337 | Programming Fundamentals for Software and Computer</h2>
+                                <ul className="circle-list">
+                                    <li>Key features of the C programming language. Pointers, memory models and memory management. Manipulation of text files and binary files. Introduction to recursion. Introduction to a modern object-oriented language. Development of basic program design skills with small projects.</li>
+                                </ul>
                             </>
                         )}
 
@@ -270,8 +300,17 @@ export default function Experience() {
                             <>
                                 {/* W23 Courses */}
                                 <h2 className="role-title"> ENSF 381 | Full Stack Web Development</h2>
+                                <ul className="circle-list">
+                                    <li>A practical survey of fullstack software development including front-end and back-end design and development, relevant libraries and framework, principles of devOps and cloud integration, in the context of agile software development. Introduction to Continuous Integration and Continuous Delivery (CI/CD).</li>
+                                </ul>
                                 <h2 className="role-title"> ENSF 380 | Object Oriented Principles for Software Development</h2>
+                                <ul className="circle-list">
+                                    <li>Fundamental object-oriented software design and development topics for software engineering. Object-oriented analysis, design and development. Inheritance, polymorphism, and application of common data structures. Best practices for tools for testing, debugging, and documentation.</li>
+                                </ul>
                                 <h2 className="role-title"> ENSF 338 | Practical Data Structures and Algorithms</h2>
+                                <ul className="circle-list">
+                                    <li>Introduction to foundational data structures such as stacks, queues, lists, heaps, hash tables,trees, and graphs. Sorting and searching algorithms. Complexity analysis. Applications for software development</li>
+                                </ul>
                             </>
                         )}
 
@@ -282,8 +321,17 @@ export default function Experience() {
                             <>
                                 {/* F22 Courses */}
                                 <h2 className="role-title"> ENSF 300 | Software Engineering Practices for Data Management</h2>
+                                <ul className="circle-list">
+                                    <li>Introduction to professional skills practices within software engineering. Individual software processes and reflection, resiliency and debugging skills, command line navigation, revision control. Foundations of database management systems. Types of data models, relational and entity-relationship models, integrity constraints, normalization, Structured Query Language (SQL). Data privacy, security, and ethical considerations.</li>
+                                </ul>
                                 <h2 className="role-title"> ENEL 353 | Digital Circuits</h2>
+                                <ul className="circle-list">
+                                    <li>Number systems and simple codes. Combinational logic: Boolean algebra, truth tables, minterms, maxterms, Karnaugh maps; gates, buffers, multiplexers and decoders; combinational circuit timing. Sequential circuits: latches and D flip flops; timing considerations; analysis and synthesis techniques; Mealy and Moore machine models; counters and registers. Introduction to memory arrays.</li>
+                                </ul>
                                 <h2 className="role-title"> ENDG 319 | Probability, Statistics, and Machine Learning</h2>
+                                <ul className="circle-list">
+                                    <li>Presentation and description of data, introduction to probability theory, Bayes' theorem, discrete and continuous probability distributions, estimation, sampling distributions, tests of hypotheses on means, variances and proportions; Introduction to fundamental machine learning including linear regression, classification and correlation. Applications are chosen from engineering practice from all disciplines.</li>
+                                </ul>
                             </>
                         )}
 
@@ -294,6 +342,9 @@ export default function Experience() {
                             <>
                                 {/* F21 Courses */}
                                 <h2 className="role-title"> ENDG 233 | Programming with Data</h2>
+                                <ul className="circle-list">
+                                    <li>Fundamental programming constructs and data structures. Algorithm development and problem solving. Programming techniques to facilitate data analysis. Obtaining and cleaning data. Data validation. Data manipulation. Data visualization. Introduction to decision making using machine learning. Applications chosen from all engineering disciplines.</li>
+                                </ul>
                             </>
                         )}
 
