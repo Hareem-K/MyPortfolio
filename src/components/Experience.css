@@ -16,6 +16,10 @@ body {
     background-color: rgb(247, 247, 255);
 }
 
+.courses {
+    background-color: rgb(250, 255, 250);
+}
+
 .text-container {
     margin: 0 20px;
 }
