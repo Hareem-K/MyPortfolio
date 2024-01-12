@@ -155,7 +155,7 @@ export default function Experience() {
                         </ul>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'center', maxWidth: '217px', margin: '0 auto', marginTop: '10px' }}>
-                        <Button className='btns' buttonStyle='btn--download' buttonSize='btn--large' linkTo={"/"} external>
+                        <Button className='btns' buttonStyle='btn--download' buttonSize='btn--large' linkTo={"https://www.ibm.com/training/badge/web-development-fundamentals"} external>
                         Credential in Progress <i className='fas fa-arrow-right' />
                         </Button>
                     </div>
