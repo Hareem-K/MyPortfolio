@@ -213,7 +213,7 @@ export default function Experience() {
 
             <div className='courses'>
                 <h1 style={{ marginTop: '10px', textDecoration: 'underline' }}> 📚 Completed Software Courses</h1>
-                <p style={{ marginLeft: '20px'}}>Click on the semester to view my completed software courses</p>
+                <p style={{ marginLeft: '20px'}}>Click on a semester to view my completed software courses</p>
 
                 <div className="text-container">
                     <div className="experience-item">
