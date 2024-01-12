@@ -1,10 +1,95 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../App.css';
 import '../Experience.css';
 import Footer from '../Footer';
 import { Button } from '../Button';
 
 export default function Experience() {
+    const [showWinter2024, setShowWinter2024] = useState(false);
+    const [showFall2023, setShowFall2023] = useState(false);
+    const [showSummer2023, setShowSummer2023] = useState(false);
+    const [showSpring2023, setShowSpring2023] = useState(false);
+    const [showWinter2023, setShowWinter2023] = useState(false);
+    const [showFall2022, setShowFall2022] = useState(false);
+    const [showFall2021, setShowFall2021] = useState(false);
+
+    const toggleWinter2024 = () => {
+        setShowWinter2024(!showWinter2024);
+        // Close other periods if open
+        setShowFall2023(false);
+        setShowSummer2023(false);
+        setShowSpring2023(false);
+        setShowWinter2023(false);
+        setShowFall2022(false);
+        setShowFall2021(false);
+    };
+
+    const toggleFall2023 = () => {
+        setShowFall2023(!showFall2023);
+        // Close other periods if open
+        setShowWinter2024(false);
+        setShowSummer2023(false);
+        setShowSpring2023(false);
+        setShowWinter2023(false);
+        setShowFall2022(false);
+        setShowFall2021(false);
+    };
+
+    const toggleSummer2023 = () => {
+        setShowSummer2023(!showSummer2023);
+        // Close other periods if open
+        setShowWinter2024(false);
+        setShowFall2023(false);
+        setShowSpring2023(false);
+        setShowWinter2023(false);
+        setShowFall2022(false);
+        setShowFall2021(false);
+    };
+
+    const toggleSpring2023 = () => {
+        setShowSpring2023(!showSpring2023);
+        // Close other periods if open
+        setShowWinter2024(false);
+        setShowFall2023(false);
+        setShowSummer2023(false);
+        setShowWinter2023(false);
+        setShowFall2022(false);
+        setShowFall2021(false);
+    };
+
+    const toggleWinter2023 = () => {
+        setShowWinter2023(!showWinter2023);
+        // Close other periods if open
+        setShowWinter2024(false);
+        setShowFall2023(false);
+        setShowSummer2023(false);
+        setShowSpring2023(false);
+        setShowFall2022(false);
+        setShowFall2021(false);
+    };
+
+    const toggleFall2022 = () => {
+        setShowFall2022(!showFall2022);
+        // Close other periods if open
+        setShowWinter2024(false);
+        setShowFall2023(false);
+        setShowSummer2023(false);
+        setShowSpring2023(false);
+        setShowWinter2023(false);
+        setShowFall2021(false);
+    };
+
+    const toggleFall2021 = () => {
+        setShowFall2021(!showFall2021);
+        // Close other periods if open
+        setShowWinter2024(false);
+        setShowFall2023(false);
+        setShowSummer2023(false);
+        setShowSpring2023(false);
+        setShowWinter2023(false);
+        setShowFall2022(false);
+    };
+
     return (
         <>
             <h1 className='experience'>EXPERIENCE</h1>
@@ -122,6 +207,97 @@ export default function Experience() {
                         <ul className="circle-list">
                             <li>Received a recognition award from Glenbow Construction Company in acknowledgement of “high performance, versatility, adaptability and multitasking”.</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div className='work'>
+                <h1 style={{ marginTop: '10px', textDecoration: 'underline' }}> 📚 Completed Software Courses</h1>
+                <p style={{ marginLeft: '20px'}}>Click on the semester to view my completed software courses</p>
+
+                <div className="text-container">
+                    <div className="experience-item">
+                        <h2 style={{ marginTop: '15px', textDecoration: 'underline', cursor: 'pointer' }} onClick={toggleWinter2024}>
+                            Winter 2024
+                        </h2>
+                        {showWinter2024 && (
+                            <>
+                                {/* W24 Courses */}
+                                <h2 className="role-title"> ENSF 400 | Software Engineering Industry Practices and Communication</h2>
+                                <h2 className="role-title"> SENG 401 | Software Architecture</h2>
+                                <h2 className="role-title"> ENSF 444 | Machine Learning Systems</h2>
+                                <h2 className="role-title"> SENG 438 | Software Testing, Reliability, and Quality</h2>
+                            </>
+                        )}
+
+                        <h2 style={{ marginTop: '15px', textDecoration: 'underline', cursor: 'pointer' }} onClick={toggleFall2023}>
+                            Fall 2023
+                        </h2>
+                        {showFall2023 && (
+                            <>
+                                {/* F23 Courses */}
+                                <h2 className="role-title"> ENSF 480 | Principles of Software Design</h2>
+                                <h2 className="role-title"> ENSF 462 | Networked Systems</h2>
+                                <h2 className="role-title"> ENSF 461 | Applied Operating Systems</h2>
+                                <h2 className="role-title"> SENG 460 | Embedded Software and Hardware Systems</h2>
+                            </>
+                        )}
+
+                        <h2 style={{ marginTop: '15px', textDecoration: 'underline', cursor: 'pointer' }} onClick={toggleSummer2023}>
+                            Summer 2023
+                        </h2>
+                        {showSummer2023 && (
+                            <>
+                                {/* SU23 Courses */}
+                                <h2 className="role-title"> ENCM 369 | Computer organization</h2>
+                            </>
+                        )}
+
+                        <h2 style={{ marginTop: '15px', textDecoration: 'underline', cursor: 'pointer' }} onClick={toggleSpring2023}>
+                            Spring 2023
+                        </h2>
+                        {showSpring2023 && (
+                            <>
+                                {/* Sp23 Courses */}
+                                <h2 className="role-title"> ENSF 337 | Programming Fundamentals for Software and Computer</h2>
+                            </>
+                        )}
+
+                        <h2 style={{ marginTop: '15px', textDecoration: 'underline', cursor: 'pointer' }} onClick={toggleWinter2023}>
+                            Winter 2023
+                        </h2>
+                        {showWinter2023 && (
+                            <>
+                                {/* W23 Courses */}
+                                <h2 className="role-title"> ENSF 381 | Full Stack Web Development</h2>
+                                <h2 className="role-title"> ENSF 380 | Object Oriented Principles for Software Development</h2>
+                                <h2 className="role-title"> ENSF 338 | Practical Data Structures and Algorithms</h2>
+                            </>
+                        )}
+
+                        <h2 style={{ marginTop: '15px', textDecoration: 'underline', cursor: 'pointer' }} onClick={toggleFall2022}>
+                            Fall 2022
+                        </h2>
+                        {showFall2022 && (
+                            <>
+                                {/* F22 Courses */}
+                                <h2 className="role-title"> ENSF 300 | Software Engineering Practices for Data Management</h2>
+                                <h2 className="role-title"> ENEL 353 | Digital Circuits</h2>
+                                <h2 className="role-title"> ENDG 319 | Probability, Statistics, and Machine Learning</h2>
+                            </>
+                        )}
+
+                        <h2 style={{ marginTop: '15px', textDecoration: 'underline', cursor: 'pointer' }} onClick={toggleFall2021}>
+                            Fall 2021
+                        </h2>
+                        {showFall2021 && (
+                            <>
+                                {/* F21 Courses */}
+                                <h2 className="role-title"> ENDG 233 | Programming with Data</h2>
+                            </>
+                        )}
+
+ 
                     </div>
                 </div>
             </div>
