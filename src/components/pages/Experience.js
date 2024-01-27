@@ -112,6 +112,7 @@ export default function Experience() {
                     <div className="experience-item">
                         <h2 className="role-title">Operations Staff & Online Marketer | Prep 101, University of Calgary <span className="date">Aug 2022 – Current</span></h2>
                         <ul className="circle-list">
+                            <li>Manage seamless book distribution by gathering appropriate supplies, organizing materials, and maintaining master excel sheet through updates from the student database.</li>
                             <li>Collaborate with Operations Managers to ensure prep sessions go smoothly by ensuring adequate materials, assisting students with finding session locations, and answering any questions that arise during each session.</li>
                             <li>Prepare students for prep sessions by organizing sign-in desks, collecting payments, and handing out materials.</li>
                             <li>Promote upcoming prep sessions online through Facebook, Discord, and Instagram, while consistently updating and communicating session information to students.</li>
