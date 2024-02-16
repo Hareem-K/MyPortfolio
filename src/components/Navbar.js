@@ -1,6 +1,6 @@
 // Navbar.js
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Button } from './Button';
 import './Navbar.css';
 
@@ -35,24 +35,24 @@ function Navbar() {
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                            <NavLink to='/' className='nav-links' onClick={closeMobileMenu}>
                                 About
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/resume' className='nav-links' onClick={closeMobileMenu}>
+                            <NavLink to='/resume' className='nav-links' onClick={closeMobileMenu}>
                                 Resume
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
+                            <NavLink to='/projects' className='nav-links' onClick={closeMobileMenu}>
                                 Projects
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/experience' className='nav-links' onClick={closeMobileMenu}>
+                            <NavLink to='/experience' className='nav-links' onClick={closeMobileMenu}>
                                 Experience
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className='nav-item'>
                             <Button className='my--button' buttonStyle='btn--outline' linkTo='/contact' onClick={closeMobileMenu}>
