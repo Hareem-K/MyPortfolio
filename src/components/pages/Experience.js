@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../App.css';
 import '../Experience.css';
 import Footer from '../Footer';
 import { Button } from '../Button';
 
 export default function Experience() {
+    useEffect(() => {
+        // Scroll to the top when the component mounts
+        window.scrollTo(0, 0);
+    }, []);
+
     const [showWinter2024, setShowWinter2024] = useState(false);
     const [showFall2023, setShowFall2023] = useState(false);
     const [showSummer2023, setShowSummer2023] = useState(false);

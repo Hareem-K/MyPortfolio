@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../App.css';
 import Footer from '../Footer';
 import "../Contact.css";
 import { Button } from '../Button';
 
 export default function Contact() {
+    useEffect(() => {
+        // Scroll to the top when the component mounts
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <h1 className='contact'>CONTACT</h1>

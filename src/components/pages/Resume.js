@@ -1,11 +1,16 @@
 // Resume.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../App.css';
 import '../Resume.css';
 import Footer from '../Footer';
 import { Button } from '../Button';
 
 export default function Resume() {
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   const downloadLink = 'https://drive.google.com/file/d/15toBhMA7hIGz6GfedExhvNmzSjvozp6G/view?usp=sharing';
 
   return (
