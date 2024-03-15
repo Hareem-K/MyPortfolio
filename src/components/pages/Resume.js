@@ -11,7 +11,7 @@ export default function Resume() {
     window.scrollTo(0, 0);
   }, []);
 
-  const downloadLink = 'https://drive.google.com/file/d/15toBhMA7hIGz6GfedExhvNmzSjvozp6G/view?usp=sharing';
+  const downloadLink = 'https://drive.google.com/file/d/1Mi_CNTMhcLJrsaKwRGI-J5_Wv00uR3a7/view?usp=sharing';
 
   return (
     <>
