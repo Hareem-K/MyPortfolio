@@ -148,7 +148,7 @@ export default function Experience() {
                 <h1 style={{ marginTop: '10px', textDecoration: 'underline' }}>🏆 Awards and Credentials</h1>
                 <div>
                     <div className="text-container">
-                    <h2 className="role-title">Web Development Fundamentals Credential | IBM SkillsBuild <span className="date">Feb 2024</span></h2>
+                    <h2 className="role-title">Web Development Fundamentals Credential | IBM SkillsBuild <span className="date">Mar 2024</span></h2>
                         <ul className="circle-list">
                             <li>Identify basic computer functions, types of programming languages, the main steps to develop a website, and fundamentals about front-end and back-end development</li>
                             <li>Explain the features and functions of HTML, CSS, and JavaScript and how the languages interact</li>
