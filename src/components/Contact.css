@@ -3,19 +3,17 @@
     flex-direction: column;
     align-items: center;
     padding: 4rem;
-    background: #fff;
+    background: #E2D6C9;
 }
 
 .contact-heading {
     text-align: center;
     margin-bottom: 2rem;
 }
-
 .contact-item {
     text-align: center;
     margin-bottom: 4rem; /* Adjust the margin as needed */
 }
-
 .contact-image {
     width: 150px;
     height: 150px;
@@ -23,11 +21,9 @@
     margin-bottom: 4px;
     margin-top: 40px;
 }
-
 .contact-info {
-    margin-bottom: 8px;
+    margin-bottom: 2%;
 }
-
 .btn--primary {
     width: 100%;
     margin-top: 2rem; /* Add margin-top to move the button down */

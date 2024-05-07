@@ -1,5 +1,5 @@
 .navbar {
-  background: #452c63;
+  background: #5B242A;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -9,7 +9,6 @@
   top: 0;
   z-index: 999;
 }
-
 .navbar-container {
   display: flex;
   justify-content: center;
@@ -17,9 +16,8 @@
   height: 80px;
   max-width: 1500px;
 }
-
 .navbar-logo {
-  color: #fff;
+  color: #E2D6C9;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
@@ -28,12 +26,10 @@
   display: flex;
   align-items: center;
 }
-
 .fa-typo3 {
   margin-left: 0.5rem;
   font-size: 1.8rem;
 }
-
 .nav-menu {
   display: grid;
   grid-template-columns: repeat(10, auto);
@@ -45,36 +41,30 @@
   margin-right: 1rem;
   margin-left: 20rem;
 }
-
 .nav-item {
   height: 30px;
 }
-
 .nav-links {
-  color: #fff;
+  color: #E2D6C9;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
 }
-
 .nav-links.active {
-  border-bottom: 4px solid #fff;
+  border-bottom: 4px solid #E2D6C9;
 }
 .nav-links:hover {
-  border-bottom: 4px solid #fff;
+  border-bottom: 4px solid #E2D6C9;
   transition: all 0.2s ease-out;
 }
-
 .fa-bars {
-  color: #fff;
+  color: #E2D6C9;
 }
-
 .nav-links-mobile {
   display: none;
 }
-
 .menu-icon {
   display: none;
 }
@@ -83,7 +73,6 @@
   .navbar {
     position: relative;
   }
-
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -95,7 +84,6 @@
     opacity: 1;
     transition: all 0.5s ease;
   }
-
   .nav-menu.active {
     background: #452c63;
     left: -55%;
@@ -103,7 +91,6 @@
     transition: all 0.5s ease;
     z-index: 1;
   }
-
   .nav-links {
     text-align: center;
     margin: 0.5rem 4; /* Adjust the margin to control overall vertical spacing */
@@ -111,20 +98,17 @@
     width: 100%;
     display: table;
   }
-
   .nav-links:hover {
-    background-color: #fff;
+    background-color: #E2D6C9;
     color: #242424;
     border-radius: 0;
   }
-
   .navbar-logo {
     position: absolute;
     top: 0;
     left: 0;
     transform: translate(25%, 50%);
   }
-
   .menu-icon {
     display: block;
     position: absolute;
@@ -134,12 +118,10 @@
     font-size: 1.8rem;
     cursor: pointer;
   }
-
   .fa-times {
-    color: #fff;
+    color: #E2D6C9;
     font-size: 2rem;
   }
-
   .nav-links-mobile {
     display: block;
     text-align: center;
@@ -149,15 +131,15 @@
     text-decoration: none;
     font-size: 1.5rem;
     background-color: transparent;
-    color: #fff;
+    color: #E2D6C9;
     padding: 14px 20px;
-    border: 1px solid #fff;
+    border: 1px solid #E2D6C9;
     transition: all 0.3s ease-out;
   }
-
   .nav-links-mobile:hover {
-    background: #fff;
+    background: #E2D6C9;
     color: #242424;
     transition: 250ms;
   }
 }
+

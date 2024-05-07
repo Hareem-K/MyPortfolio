@@ -1,10 +1,14 @@
-.resumeImage {
-    max-width: 100%; /* Set maximum width to 100% of the parent container */
-    height: auto;    /* Maintain aspect ratio while adjusting width */
-    display: block;
-    margin: 0 auto;   
-    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
-    margin-top: 20px;
-
+body {
+    background-color: #FFF5EE; /* new color */
 }
 
+.resumePreview {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2%;
+    width: 60%; /* Adjust the width as needed */
+    height: 1070px; /* Set a longer height */
+    box-shadow: 0 6px 20px grey;
+
+  }
+  

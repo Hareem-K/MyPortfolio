@@ -1,54 +1,66 @@
 /* Button.css */
 :root {
-    --primary: #fff;
-    --blue: #1f98f4;
-  }
-  
-  .btn {
-    padding: 8px 20px;
-    border-radius: 2px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .btn--primary {
-    background-color: var(--primary);
-    color: #242424;
-    border: 1px solid var(--primary);
-    text-decoration: none;
-  }
-  
-  .btn--outline {
-    background-color: transparent;
-    color: white;
-    padding: 8px 20px;
-    border: 1px solid var(--primary);
-    transition: all 0.3s ease-out;
-    text-decoration: none;
-  }
-  
-  .btn--download {
-    background-color: var(--blue);
-    color: #fff;
-    border: 1px solid var(--blue);
-    text-decoration: none;
-  }
-  
-  .btn--medium {
-    padding: 8px 20px;
-    font-size: 20px;
-  }
-  
-  .btn--large {
-    padding: 12px 26px;
-    font-size: 20px;
-  }
-  
-  .btn--medium:hover,
-  .btn--large:hover {
-    background: #fff;
-    color: #242424;
-    transition: all 0.3s ease-out;
-  }
-  
+  --primary: #E2D6C9;
+  --darkRed: #5B242A;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: #5B242A;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  text-decoration: none;
+}
+.btn--outline {
+  background-color: transparent;
+  color: var(--primary);
+  padding: 8px 20px;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+
+.btn--download {
+  background-color: var(--darkRed);
+  color: var(--primary);
+  border: 1px solid var(--darkRed);
+  text-decoration: none;
+}
+
+.btn--credential {
+  background-color: var(--primary);
+  color: var(--darkRed);
+  border: 1px solid var(--primary);
+  text-decoration: none;
+}
+
+.btn--credential:hover {
+  background-color: #cac0b5 !important; /* a bit darker than --primary*/
+  transition: all 0.3 ease-out
+}
+
+.btn--medium {
+  padding: 8px 20px;
+  font-size: 20px;
+}
+
+.btn--large {
+  padding: 12px 26px;
+  font-size: 20px;
+}
+
+.btn--medium:hover,
+.btn--large:hover {
+  background: var(--primary);
+  color: #5B242A;
+  transition: all 0.3s ease-out;
+}
+
+

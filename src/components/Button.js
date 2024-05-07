@@ -3,7 +3,7 @@ import React from 'react';
 import './Button.css';
 import { Link } from 'react-router-dom';
 
-const STYLES = ['btn--primary', 'btn--outline', 'btn--download'];
+const STYLES = ['btn--primary', 'btn--outline', 'btn--download', 'btn--credential'];
 
 const SIZES = ['btn--medium', 'btn--large'];
 

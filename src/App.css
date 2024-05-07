@@ -2,7 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
+  
 }
 
 .home,
@@ -18,37 +19,37 @@
 }
 
 .resume {
-  background-image: url('/public/images/title3.jpg');
+  background-image: url('/public/images/beige-stroke2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: var(--darkRed);
   font-size: 100px;
 }
 
 .projects {
-  background-image: url('/public/images/title4.jpg');
+  background-image: url('/public/images/texture.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: var(--darkRed);
   font-size: 100px;
 }
 
 .experience {
-  background-image: url('/public/images/title12.jpg');
+  background-image: url('/public/images/waves.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: var(--darkRed);
   font-size: 100px;
 }
 
 .contact {
-  background-image: url('/public/images/title6.jpg');
+  background-image: url('/public/images/swirls.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: var(--darkRed);
   font-size: 100px;
 }

@@ -145,7 +145,7 @@ export default function Experience() {
 
             <div className='credentials'>
                 {/* Credentials */}
-                <h1 style={{ marginTop: '10px', textDecoration: 'underline' }}>🏆 Awards and Credentials</h1>
+                <h1 className='awards-title'>🏆 Awards and Credentials</h1>
                 <div>
                     <div className="text-container">
                     <h2 className="role-title">Web Development Fundamentals Credential | IBM SkillsBuild <span className="date">Mar 2024</span></h2>
@@ -161,7 +161,7 @@ export default function Experience() {
                         </ul>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'center', maxWidth: '217px', margin: '0 auto', marginTop: '10px' }}>
-                        <Button className='btns' buttonStyle='btn--download' buttonSize='btn--large' linkTo={"https://www.credly.com/badges/6a0adff7-21be-4060-8802-bc397cfef050/public_url"} external>
+                        <Button className='btns' buttonStyle='btn--credential' buttonSize='btn--large' linkTo={"https://www.credly.com/badges/6a0adff7-21be-4060-8802-bc397cfef050/public_url"} external>
                         View Credential <i className='fas fa-arrow-right' />
                         </Button>
                     </div>
@@ -175,7 +175,7 @@ export default function Experience() {
                         </ul>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'center', maxWidth: '217px', margin: '0 auto', marginTop: '10px' }}>
-                        <Button className='btns' buttonStyle='btn--download' buttonSize='btn--large' linkTo={"https://badges.ucalgary.ca/achievements/627d3efa0f59cdee9e664379320ec5d8"} external>
+                        <Button className='btns' buttonStyle='btn--credential' buttonSize='btn--large' linkTo={"https://badges.ucalgary.ca/achievements/627d3efa0f59cdee9e664379320ec5d8"} external>
                         View Credential <i className='fas fa-arrow-right' />
                         </Button>
                     </div>
@@ -191,7 +191,7 @@ export default function Experience() {
                         </ul>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'center', maxWidth: '217px', margin: '0 auto', marginTop: '10px' }}>
-                        <Button className='btns' buttonStyle='btn--download' buttonSize='btn--large' linkTo={"https://badges.ucalgary.ca/achievements/1786d1d78fac536b666e05d58dadbd00"} external>
+                        <Button className='btns' buttonStyle='btn--credential' buttonSize='btn--large' linkTo={"https://badges.ucalgary.ca/achievements/1786d1d78fac536b666e05d58dadbd00"} external>
                         View Credential <i className='fas fa-arrow-right' />
                         </Button>
                     </div>

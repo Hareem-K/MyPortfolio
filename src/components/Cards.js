@@ -1,11 +1,10 @@
 import React from 'react'
 import CardItem from './CardItem'
 import './Cards.css';
-
 function Cards() {
   return (
     <div className='cards'>
-      <h1>Lets Get Started!</h1>
+      <h1 className='lets_get_started'>Lets Get Started!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
             <ul className='cards__items'>
@@ -23,7 +22,6 @@ function Cards() {
                 path='/projects'
                 openInNewTab={false}
                 />
-
             </ul>
             <ul className='cards__items'>
                 <CardItem
@@ -44,9 +42,7 @@ function Cards() {
         </div>
       </div>
 
-
     </div>
   )
 }
-
 export default Cards
