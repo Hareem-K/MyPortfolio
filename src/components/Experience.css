@@ -27,6 +27,7 @@ body {
 
 .courses {
     background-color: var(--primary);
+    color: var(--darkRed);
     margin-bottom: 1%;
 }
 

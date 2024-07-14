@@ -1,5 +1,4 @@
 import React from 'react'
-import CardItem from './CardItem'
 import './ProjectCards.css';
 import Project_Card_Item from './Project_Card_Item';
 
@@ -11,8 +10,15 @@ function ProjectCards() {
         <div className='cards__wrapper'>
           <ul className='cards__items'>
                 <Project_Card_Item
+                src="images/PlotPonder.png"
+                text="Created a book management application called 'PlotPonder' with a team through GitHub. Our web application, utilizing MVC and Microservices architectures, aims to create a user-friendly book recommendation and community platform. Built using React.js, SQL, Java, Firebase, and the ChatGPT OpenAI API for the chatbot, users can search, read, and review books, and provide ratings for them. The system generates random recommendations for other books available within the database. The user bookshelf highlights the books and ratings, allowing users to create subcategories for specific book interests and facilitating discussions between like-minded individuals. The integration of the chatbot enables users to seek quick recommendations by prompting the bot with a book and receiving a list of suggestions. Our application addresses the need for a comprehensive and interactive platform for book enthusiasts to discover, share, and discuss their favorite books."
+                label='Book Management Application'
+                path='https://github.com/sahiti-akella/SENG401FinalProject'
+                openInNewTab={true}
+                />
+                <Project_Card_Item
                 src="images/project.png"
-                text="This website was developed using React.js and CSS to showcase a compilation of my projects, experiences, and achievements in one place. Explore the GitHub repository to gain insights into the development process."
+                text="This website was developed using React.js and CSS to showcase a compilation of my projects, experiences, and achievements in one place. A rebrand was implemented to improve UI design, interactivity, and the overall user experience. Explore the GitHub repository to gain insights into the development process."
                 label='Portfolio Website'
                 path='https://github.com/Hareem-K/MyPortfolio'
                 openInNewTab={true}

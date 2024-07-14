@@ -40,7 +40,7 @@ export default function SendMessage() {
     };
 
     return (
-        <>
+        <>  
             <div className='form-box'>
                 <div className='form-group'>
                     <input 
