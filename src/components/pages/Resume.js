@@ -16,7 +16,7 @@ export default function Resume() {
   return (
     <>
       <h1 className='resume'>RESUME</h1>
-      <iframe className='resumePreview' src="https://drive.google.com/file/d/1Mi_CNTMhcLJrsaKwRGI-J5_Wv00uR3a7/preview" allow="autoplay"></iframe>
+      <iframe className='resumePreview' src="https://drive.google.com/file/d/1Mi_CNTMhcLJrsaKwRGI-J5_Wv00uR3a7/preview" title="My Resume" allow="autoplay"></iframe>
       <div style={{ display: 'flex', justifyContent: 'center', paddingBottom: '50px', paddingTop: '30px', maxWidth: '197px', margin: '0 auto' }}>
         <Button className='btns' buttonStyle='btn--download' buttonSize='btn--large' linkTo={downloadLink} external>
           DOWNLOAD <i className='fas fa-download' />

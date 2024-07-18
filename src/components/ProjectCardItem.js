@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './project_card.css'
 
-function Project_Card_Item(props) {
+function ProjectCardItem(props) {
   const [expanded, setExpanded] = useState(false);
 
   const openLink = (e, url) => {
@@ -50,4 +50,4 @@ function Project_Card_Item(props) {
   );
 }
 
-export default Project_Card_Item;
+export default ProjectCardItem;
