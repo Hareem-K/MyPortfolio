@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--primary);
 }
 
 * {
@@ -8,16 +9,26 @@ body {
 }
 
 .work {
-    background-color: #F5F5F5;
+    background-color: var(--primary);
+    color: var(--darkRed);
+}
+
+.awards-title {
+    color: var(--primary);
+    margin-top: 10px;
+    text-decoration: underline;
 }
 
 .credentials {
-    /* background-color: #F5FFFA; */
-    background-color: rgb(247, 247, 255);
+    background-color: var(--darkRed);
+    color: var(--primary);
+    padding-bottom: 1%;
 }
 
 .courses {
-    background-color: rgb(250, 255, 250);
+    background-color: var(--primary);
+    color: var(--darkRed);
+    margin-bottom: 1%;
 }
 
 .text-container {

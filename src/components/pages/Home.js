@@ -3,6 +3,7 @@ import '../../App.css';
 import HeroSection from '../HeroSection';
 import Cards from '../Cards';
 import Footer from '../Footer';
+import FeaturedProjects from '../FeaturedProjects';
 
 function Home() {
     useEffect(() => {
@@ -14,8 +15,9 @@ function Home() {
         <>
             <HeroSection />
             <Cards />
+            <FeaturedProjects />
             <Footer />
-
+            
         
         </>
     )

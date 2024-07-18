@@ -1,34 +1,40 @@
-.contact-container {
+.contact-items-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4rem;
-    background: #fff;
-}
-
-.contact-heading {
-    text-align: center;
-    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around; /* Adjust this as needed to space items */
+    margin-top: 20px; /* Adjust margin as needed */
 }
 
 .contact-item {
+    width: 45%; /* Adjust width as needed */
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
-    margin-bottom: 4rem; /* Adjust the margin as needed */
+    margin: 10px;
+    width: 25rem;
 }
 
-.contact-image {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 4px;
-    margin-top: 40px;
+.contact-item img {
+    max-width: 100px;
 }
 
-.contact-info {
-    margin-bottom: 8px;
+.contact-item h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.btn--primary {
-    width: 100%;
-    margin-top: 2rem; /* Add margin-top to move the button down */
+.contact-item p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-item .btn--primary {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .contact-item {
+        width: 100%; /* Full width on smaller screens */
+    }
 }

@@ -5,7 +5,7 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <div className='hero-container'>
-      {/* <video src='/videos/clouds.mp4' autoPlay loop muted /> */}
+      <video src='/videos/beige-flow1.mp4' autoPlay loop muted />
       <h1>Welcome</h1>
       <img className='image' src="https://i.postimg.cc/SNJFPCpS/photo.png" alt="Hareem Khan" />
       <p className='description'>

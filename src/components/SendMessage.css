@@ -1,0 +1,27 @@
+.form-box {
+    margin: auto;
+    margin-top: 3%;
+    padding: 7%;
+    background-image: url('/public/images/paint.jpg');
+    background-size: cover;
+    box-shadow: 0 6px 20px grey;
+
+}
+  
+input, textarea {
+    width: 50%;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    margin-top: 1%;
+}
+
+.contact-message {
+    color: #5B242A;
+    max-width: 30%;
+    text-align: center;
+    position: absolute;
+    right: 8rem; /* Adjust the value according to your layout */
+    transform: translateY(-50%);
+}
