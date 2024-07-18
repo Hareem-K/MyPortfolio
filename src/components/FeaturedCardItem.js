@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Featured_Card_Item(props) {
+function FeaturedCardItem(props) {
   const openLink = (e, url) => {
     e.preventDefault();
 
@@ -30,4 +30,4 @@ function Featured_Card_Item(props) {
   )
 }
 
-export default Featured_Card_Item
+export default FeaturedCardItem
