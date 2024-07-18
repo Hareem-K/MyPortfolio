@@ -1,6 +1,6 @@
 import React from 'react'
 import './FeaturedProjects.css';
-import Featured_Card_Item from './featured_Card_Item';
+import Featured_Card_Item from './Featured_Card_Item';
 
 function FeaturedProjects() {
   return (

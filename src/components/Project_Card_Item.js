@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './project_card.css'
 
 function Project_Card_Item(props) {
   const [expanded, setExpanded] = useState(false);
-  
-  const toggleExpand = () => {
-    setExpanded(!expanded);
-  };
 
   const openLink = (e, url) => {
     e.preventDefault();
