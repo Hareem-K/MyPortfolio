@@ -33,7 +33,7 @@ export default function Contact() {
                     <img src="images/linkedin.png" alt="LinkedIn" className='contact-image' />
                     <h1>LinkedIn</h1>
                     <p className='contact-info'>Let's connect on LinkedIn!</p>
-                    <Button buttonStyle="btn--primary" linkTo={"https://www.linkedin.com/in/hareemzkhan"} external>
+                    <Button buttonStyle="btn--download" linkTo={"https://www.linkedin.com/in/hareemzkhan"} external>
                         Let's Connect!
                     </Button>
                 </div>
@@ -42,7 +42,7 @@ export default function Contact() {
                     <img src="images/github.png" alt="GitHub" className='contact-image' />
                     <h1>Github</h1>
                     <p className='contact-info'>Don't forget to check out my GitHub profile to view all of my projects!</p>
-                    <Button buttonStyle="btn--primary" linkTo={"https://github.com/Hareem-K"} external>
+                    <Button buttonStyle="btn--download" linkTo={"https://github.com/Hareem-K"} external>
                         Github
                     </Button>
                 </div>

@@ -14,6 +14,12 @@ export default function SendMessage() {
     };
 
     const handleSubmit = async () => {
+        //name, email, and message feilds are all required
+        if (!formData.name || !formData.email || !formData.message) {
+            alert('Please fill out all fields.');
+            return;
+        }
+
         try {
             const response = await fetch('https://formsubmit.co/hareemkhan@gmail.com', {
                 method: 'POST',
