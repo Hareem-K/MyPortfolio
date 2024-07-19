@@ -14,7 +14,7 @@ export default function SendMessage() {
     };
 
     const handleSubmit = async () => {
-        //name, email, and message feilds are all required
+        // name, email, and message fields are all required
         if (!formData.name || !formData.email || !formData.message) {
             alert('Please fill out all fields.');
             return;
@@ -48,6 +48,7 @@ export default function SendMessage() {
     return (
         <>  
             <div className='form-box'>
+                <h3 className='contact-message'>Feel free to send me a message for any inquiries, opportunities, and more!</h3>
                 <div className='form-group'>
                     <input 
                         className='form-control' 
@@ -72,7 +73,6 @@ export default function SendMessage() {
                         required
                     />
                 </div>
-                <h3 className='contact-message'>Feel free to send me a message for any inquiries, opportunities, and more!</h3>
                 <div className='form-group'>
                     <textarea 
                         className='form-control' 
@@ -89,7 +89,6 @@ export default function SendMessage() {
                     Send Message
                 </Button>
             </div>
-
         </>
     );
 }
