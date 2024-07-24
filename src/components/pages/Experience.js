@@ -218,7 +218,7 @@ export default function Experience() {
 
                 <div className="text-container">
                     <div className="experience-item">
-                        <h2 className="role-title">Web Content Coordinator | The School of Public Policy, University of Calgary <span className="date">Nov 2023 - Current</span></h2>
+                        <h2 className="role-title">Web Content Coordinator | The School of Public Policy, University of Calgary <span className="date">Nov 2023 - July 2024</span></h2>
                         <ul className="circle-list">
                             <li>Enhance user experience through meticulous content updates and page revisions, ensuring accuracy and aesthetic appeal of webpages, resulting in the creation of over 700 pages.</li>
                             <li>Establish an organized tracking system by consistently updating the master Excel list of all content slated for migration, facilitating seamless project management and progress monitoring.</li>
