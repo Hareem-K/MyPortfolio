@@ -46,6 +46,16 @@ export default function Contact() {
                         Github
                     </Button>
                 </div>
+
+                <div className='contact-item'>
+                    <img src="images/devpost.svg" alt="Devpost" className='contact-image' />
+                    <h1>Devpost</h1>
+                    <p className='contact-info'>Check out my devpost profile to see my hackathons and projects!</p>
+                    <Button buttonStyle="btn--download" linkTo={"https://devpost.com/Hareem-K"} external>
+                        Devpost
+                    </Button>
+                </div>
+
             </div>
 
             <Footer />
