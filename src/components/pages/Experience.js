@@ -220,10 +220,10 @@ export default function Experience() {
                     <div className="experience-item">
                         <h2 className="role-title">Web Content Coordinator | The School of Public Policy, University of Calgary <span className="date">Nov 2023 - July 2024</span></h2>
                         <ul className="circle-list">
-                            <li>Enhance user experience through meticulous content updates and page revisions, ensuring accuracy and aesthetic appeal of webpages, resulting in the creation of over 700 pages.</li>
-                            <li>Establish an organized tracking system by consistently updating the master Excel list of all content slated for migration, facilitating seamless project management and progress monitoring.</li>
-                            <li>Conduct rigorous testing and quality assurance measures to guarantee flawless functionality and performance of the revamped web pages, contributing to an error-free user experience.</li>
-                            <li>Collaborate closely with the Web Specialist, providing versatile support and addressing various tasks associated with the web rebuilt project, showcasing adaptability and a collaborative sprite to achieve project goals.</li>
+                            <li>Enhanced user experience through meticulous content updates and page revisions, ensuring accuracy and aesthetic appeal of webpages, resulting in the creation of over 700 pages.</li>
+                            <li>Established an organized tracking system, consistently updated the master Excel list of content slated for migration, and facilitated seamless project management and progress monitoring.</li>
+                            <li>Conducted rigorous testing and quality assurance measures to guarantee flawless functionality and performance of the revamped web pages, contributing to an error-free user experience.</li>
+                            <li>Collaborated closely with the Web Specialist within a scrum methodology, providing versatile support and addressing various tasks to achieve project goals, showcasing adaptability and teamwork.</li>
                         </ul>
                     </div>
                 </div>
@@ -263,11 +263,11 @@ export default function Experience() {
                     <div className="experience-item">
                         <h2 className="role-title">Administrative & Marketing Assistant | Glenbow Construction <span className="date">Jan 2021 – Aug 2023</span></h2>
                         <ul className="circle-list">
-                            <li>Provide consistent administrative support to the company by coordinating with clients, construction workers and suppliers.</li>
-                            <li>Promote the company by maintaining a personable telemarketing and social media presence to win new projects.</li>
-                            <li>Manage the company’s expense account by preparing and processing invoices, recording all transactions, and ensuring all bills are paid in a timely manner.</li>
-                            <li>Communicate with different suppliers in order to get quotes for various construction materials with delivery timelines and present them to higher management for approval.</li>
-                            <li>Ensure on time delivery of approved supplies and material for projects as per the schedule by consistently checking in with suppliers.</li>
+                            <li>Provided consistent administrative support to the company by coordinating with clients, construction workers and suppliers.</li>
+                            <li>Promoted the company by maintaining a personable telemarketing and social media presence to win new projects.</li>
+                            <li>Managed the company’s expense account by preparing and processing invoices, recording all transactions, and ensuring all bills are paid in a timely manner.</li>
+                            <li>Communicated with different suppliers in order to get quotes for various construction materials with delivery timelines and present them to higher management for approval.</li>
+                            <li>Ensured on time delivery of approved supplies and material for projects as per the schedule by consistently checking in with suppliers.</li>
                         </ul>
                     </div>
                 </div>
