@@ -8,6 +8,22 @@ function ProjectCards() {
       <h1>Click on a Project to View it's Description and GitHub Repository </h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
+        <ul className='cards__items'>
+                <ProjectCardItem
+                src="images/PDFFusion.png"
+                text="PDF Fusion is a simple PDF maniplulation application that allows users to merge, split, and manipulate PDF files. While still in development, the front-end will be developed using React.js, CSS, and Bootstrap, to ensure a responsive and user-friendly interface. For back-end development, Python and AWS will be utilized to handle file processing and storage. Additionally, Jest will be used for testing, ensuring the application's functionality and reliability."
+                label='PDF Fusion'
+                path='https://github.com/Hareem-K/PDF_Fusion'
+                openInNewTab={true}
+                />
+                <ProjectCardItem
+                src="images/HabitCircle.jpg"
+                text="During the Alberta Health Hack in Summer 2024, my team and I developed 'HabitCircle', a responsive habit tracker web application designed to support families of youth undergoing rehabilitation and dealing with depression or mental illness. Our project won 3rd place, and we were awarded $150, which we donated to the Alberta Children's Hospital Foundation in recognition of our contributions. The application featured a gamified approach to habit tracking, helping users stay engaged in their recovery journey. I utilized React.js and CSS/HTML for front-end development, while Figma was employed for UI/UX design planning."
+                label='HabitCircle | Alberta Health Hack Winner'
+                path='https://github.com/Hareem-K/HabitCircle_albertahealthhack'
+                openInNewTab={true}
+                />
+            </ul>
           <ul className='cards__items'>
                 <ProjectCardItem
                 src="images/PlotPonder.png"
