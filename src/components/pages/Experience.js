@@ -280,7 +280,7 @@ export default function Experience() {
                 <h1 className='awards-title'>🏆Awards and Credentials</h1>
                 <div>
                     <div className="text-container">
-                    <h2 className="role-title">Artificial Intelligence Fundamentals | IBM SkillsBuild <span className="date">Aug 2024</span></h2>
+                    <h2 className="role-title">Artificial Intelligence Fundamentals | IBM SkillsBuild <span className="date">Sept 2024</span></h2>
                         <ul className="circle-list">
                             <li>Describe the history of AI development</li>
                             <li>Define and describe structured, unstructured, and semi-structured data, machine learning, and ways that AI makes predictions from data</li>
