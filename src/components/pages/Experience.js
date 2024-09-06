@@ -295,8 +295,8 @@ export default function Experience() {
                         </ul>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'center', maxWidth: '217px', margin: '0 auto', marginTop: '10px' }}>
-                        <Button className='btns' buttonStyle='btn--credential' buttonSize='btn--large' linkTo={"https://www.ibm.com/training/badge/artificial-intelligence-fundamentals"} external>
-                        In Progress <i className='fas fa-arrow-right' />
+                        <Button className='btns' buttonStyle='btn--credential' buttonSize='btn--large' linkTo={"https://www.credly.com/badges/9f4cba7a-6446-40f1-9122-e0bcc3fe6df4/public_url"} external>
+                        View Credential <i className='fas fa-arrow-right' />
                         </Button>
                     </div>
                 </div>
