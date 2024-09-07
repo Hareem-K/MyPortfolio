@@ -18,7 +18,7 @@ function ProjectCards() {
                 />
                 <ProjectCardItem
                 src="images/HabitCircle.jpg"
-                text="During the Alberta Health Hack in Summer 2024, my team and I developed 'HabitCircle', a responsive habit tracker web application designed to support families of youth undergoing rehabilitation and dealing with depression or mental illness. Our project won 3rd place, and we were awarded $150, which we donated to the Alberta Children's Hospital Foundation in recognition of our contributions. The application featured a gamified approach to habit tracking, helping users stay engaged in their recovery journey. I utilized React.js and CSS/HTML for front-end development, while Figma was employed for UI/UX design planning."
+                text="During the Alberta Health Hack in Summer 2024, my team and I developed 'HabitCircle', a responsive habit tracker web application designed to support families of youth undergoing rehabilitation and dealing with depression and mental illness. Our project won 3rd place, and we were awarded $150 and donated $150 to the Alberta Children's Hospital Foundation in recognition of our contributions. The application featured a gamified approach to habit tracking, helping users stay engaged in their recovery journey. We utilized React.js and CSS/HTML for front-end development, and employed Figma for UI/UX design planning."
                 label='HabitCircle | Alberta Health Hack Winner'
                 path='https://github.com/Hareem-K/HabitCircle_albertahealthhack'
                 openInNewTab={true}
