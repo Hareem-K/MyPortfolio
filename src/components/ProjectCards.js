@@ -11,7 +11,7 @@ function ProjectCards() {
         <ul className='cards__items'>
                 <ProjectCardItem
                 src="images/PDFFusion.png"
-                text="PDF Fusion is a simple PDF maniplulation application that allows users to merge, split, and manipulate PDF files. While still in development, the front-end will be developed using React.js, CSS, and Bootstrap, to ensure a responsive and user-friendly interface. For back-end development, Python and AWS will be utilized to handle file processing and storage. Additionally, Jest will be used for testing, ensuring the application's functionality and reliability."
+                text="PDF Fusion is a simple PDF maniplulation application that allows users to merge, split, and annotate PDF files. While still in development, the front-end will be developed using React.js, CSS, and Bootstrap, to ensure a responsive and user-friendly interface. For back-end development, Python and AWS will be utilized to handle file processing and storage. Additionally, Jest will be used for testing, ensuring the application's functionality and reliability."
                 label='PDF Fusion'
                 path='https://github.com/Hareem-K/PDF_Fusion'
                 openInNewTab={true}
