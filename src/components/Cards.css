@@ -1,5 +1,5 @@
 .cards {
-  padding: 4rem;
+  padding: 3rem;
   background: #E2D6C9 !important; /* new color */
 }
 
@@ -7,6 +7,7 @@
   text-align: center;
   color: #5B242A;
 }
+
 .cards__container {
   display: flex;
   flex-flow: column;
@@ -23,14 +24,18 @@
 
 .cards__items {
   margin-bottom: 24px;
+  display: flex; /* Flex for wrapping */
+  flex-wrap: wrap;
+  justify-content: center; /* Center cards */
 }
 
 .cards__item {
   display: flex;
   flex: 1;
-  margin: 0 1rem;
+  margin: 1rem; /* Add spacing around cards */
   border-radius: 10px;
-  width: 650px;
+  width: 100%; /* Full width by default */
+  max-width: 650px; /* Prevent cards from getting too large */
 }
 
 .cards__item__link {
@@ -52,10 +57,6 @@
   overflow: hidden;
 }
 
-.fade-img {
-  animation-name: fade-img;
-  animation-duration: 2s;
-}
 .cards__item__pic-wrap::after {
   content: attr(data-category);
   position: absolute;
@@ -63,7 +64,7 @@
   margin-left: 0px !important;
   padding: 6px 8px;
   max-width: calc((100%) - 60px);
-  font-size: 20px !important;
+  font-size: 18px;
   font-weight: 700;
   color: #5B242A !important;
   background-color: #E2D6C9 !important;
@@ -85,7 +86,6 @@
   transition: all 0.2s linear;
 }
 
-/* code that scales image in/out when hovering over cards in about page */
 .cards__item__img:hover {
   transform: scale(1.1);
 }
@@ -99,28 +99,50 @@
   background-color: #5B242A;
   font-size: 18px;
   line-height: 24px;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-bottom: 5px;
-  padding-top: 10px;
+  padding: 10px;
   margin-top: -50px;
+  text-align: center;
 }
 
-@media only screen and (min-width: 1200px) {
-  .content__blog__container {
-    width: 84%;
-  }
-}
-
+/* Large screens (>= 1024px) */
 @media only screen and (min-width: 1024px) {
   .cards__items {
     display: flex;
   }
-}
 
-@media only screen and (max-width: 1024px) {
   .cards__item {
-    margin-bottom: 2rem;
+    width: 48%; /* Two cards per row */
+    margin: 1rem; /* Add spacing between cards */
   }
 }
 
+/* Mobile screens (< 768px) */
+@media only screen and (max-width: 767px) {
+  .cards__item {
+    width: 100% !important; /* Expand the card width closer to full width */
+    margin: 1rem auto !important; /* Center the card with proper spacing */
+    max-width: none !important; /* Remove any restrictive max-width */
+    flex: none !important; /* Ensure cards do not shrink or grow unexpectedly */
+  }
+
+  .cards__item__text {
+    font-size: 16px !important; /* Maintain readable font size for mobile */
+    padding: 8px !important; /* Compact padding */
+  }
+
+  .cards__item__pic-wrap::after {
+    font-size: 16px !important; /* Adjust label font size */
+    padding: 4px 6px !important; /* Adjust padding */
+  }
+}
+
+/* Adjust parent container to ensure cards have full available space */
+.cards__items {
+  justify-content: center !important; /* Ensure cards are centered */
+  gap: 1rem !important; /* Add spacing between rows */
+}
+
+.cards__container {
+  width: 100% !important; /* Ensure the container stretches to full width */
+  padding: 0 !important; /* Remove any padding that could constrain the width */
+}

@@ -3,7 +3,8 @@
     background-color: var(--primary);
     color: var(--darkRed);
     border: 1px #cac0b5;
-    box-shadow: 0 6px 20px black
+    box-shadow: 0 6px 20px black;
+    height: 20px;
 }
 
 .GitHub-Button:hover {

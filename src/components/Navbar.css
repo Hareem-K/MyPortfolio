@@ -73,42 +73,44 @@
   .navbar {
     position: relative;
   }
+
   .nav-menu {
-    display: flex;
+    display: none; /* Completely hide the menu by default */
     flex-direction: column;
+    align-items: center; /* Horizontally center links */
+    justify-content: space-evenly; /* Evenly distribute links vertically */
     width: 100%;
     height: 90vh;
     position: absolute;
     top: 80px;
-    left: -180%;
-    opacity: 1;
+    left: -320px !important;
+    background: var(--darkRed);
+    opacity: 0;
     transition: all 0.5s ease;
   }
+
   .nav-menu.active {
-    background: var(--darkRed);
-    left: -55%;
+    display: flex; /* Show the menu when active */
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
   }
+
   .nav-links {
     text-align: center;
-    margin: 0.5rem 4; /* Adjust the margin to control overall vertical spacing */
-    padding: 0rem 2rem;
-    width: 100%;
-    display: table;
+    margin: 0; /* Remove any extra vertical margin */
+    padding: 0.5rem 1rem 2.5rem; /* the 2.5rem moves the active underline up and down*/
+    width: 100%; /* Full-width links */
+    display: block; /* Display links as blocks */
+    font-size: 2rem; /* Increase font size for mobile menu links */
   }
+
   .nav-links:hover {
     background-color: #E2D6C9;
     color: #242424;
     border-radius: 0;
   }
-  .navbar-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
-  }
+
   .menu-icon {
     display: block;
     position: absolute;
@@ -118,28 +120,51 @@
     font-size: 1.8rem;
     cursor: pointer;
   }
+
+  .fa-bars,
   .fa-times {
     color: #E2D6C9;
     font-size: 2rem;
   }
+
+  .navbar-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: translate(0, 50%);
+  }
+
   .nav-links-mobile {
     display: block;
     text-align: center;
-    margin: 2rem auto;
+    margin: 2rem auto; /* Add spacing around the button */
     border-radius: 4px;
-    width: 80%;
+    width: 90%; /* Make the button wide */
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Increase font size for the button */
     background-color: transparent;
     color: #E2D6C9;
-    padding: 14px 20px;
-    border: 1px solid #E2D6C9;
+    padding: 16px 24px; /* Increase padding for a bigger button */
+    border: 2px solid #E2D6C9; /* Thicker border for emphasis */
     transition: all 0.3s ease-out;
   }
+
   .nav-links-mobile:hover {
     background: #E2D6C9;
     color: #242424;
     transition: 250ms;
   }
-}
 
+  /* Ensure the button in the nav-links list is styled similarly */
+  .my--button {
+    font-size: 3rem !important; /* Matches the nav-links-mobile */
+
+  }
+
+  .my--button:hover {
+    background: #E2D6C9;
+    color: #242424;
+  }
+
+  
+}

@@ -46,6 +46,22 @@
   transition: all 0.3 ease-out
 }
 
+.btn--outline-inverse {
+  background-color: var(--primary); /* Primary background */
+  color: var(--darkRed); /* Dark red text */
+  padding: 8px 20px;
+  border: 1px solid var(--darkRed); /* Dark red outline */
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+
+.btn--outline-inverse:hover {
+  background-color: var(--darkRed) !important; /* Transparent background on hover */
+  color: var(--primary) !important; /* Primary color text */
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-out;
+}
+
 .btn--medium {
   padding: 8px 20px;
   font-size: 20px;

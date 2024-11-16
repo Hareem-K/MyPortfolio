@@ -33,7 +33,26 @@
     margin-top: 10px;
 }
 
+/* QR Code positioning */
+.QR {
+    position: absolute;
+    right: 20px; /* Align to the right side */
+    height: auto;
+    width: 150px; /* Adjust to a suitable size */
+    margin-top: -1%;
+}
+
 @media (max-width: 768px) {
+    .contact-item {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* Mobile screens (< 768px) */
+@media only screen and (max-width: 767px) {
+    .contact {
+        font-size: 5.1rem !important;
+    }
     .contact-item {
         width: 100%; /* Full width on smaller screens */
     }

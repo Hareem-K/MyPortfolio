@@ -1,14 +1,34 @@
 body {
-    background-color: #FFF5EE; /* new color */
+  background-color: #FFF5EE; /* new color */
 }
 
 .resumePreview {
-    display: block;
-    margin: 0 auto;
-    margin-top: 2%;
-    width: 60%; /* Adjust the width as needed */
-    height: 1070px; /* Set a longer height */
-    box-shadow: 0 6px 20px grey;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2%;
+  width: 60%; /* Adjust width as needed */
+  height: auto; /* Dynamically adjust height */
+  aspect-ratio: 8.5 / 11; /* Maintain aspect ratio for US Letter size */
+  box-shadow: 0 6px 20px grey;
+  transform: scale(1); /* Normal scale for larger screens */
+  transform-origin: top center; /* Adjust scaling origin */
+  overflow: hidden;
+}
 
+/* Mobile View (max-width: 767px) */
+@media screen and (max-width: 767px) {
+  .resumePreview {
+    width: 90%; /* Almost full-width for smaller screens */
+    height: auto; /* Adjust height dynamically */
+    margin-top: 5%;
+    box-shadow: 0 4px 15px grey;
+    transform: scale(0.9); /* Slightly scale down for better fit */
+    transform-origin: top center; /* Scale down from the center */
   }
-  
+}
+
+/* Ensure iframe content fills the container */
+.resumePreview iframe {
+  width: 100%; /* Fill the container */
+  height: 100%; /* Maintain aspect ratio */
+}
