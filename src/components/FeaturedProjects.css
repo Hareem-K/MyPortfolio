@@ -1,14 +1,13 @@
 .featured_cards {
-    background-color: var(--primary);
+    background-color: var(--darkRed);
 }
 .featured {
-    background-color: var(--darkRed);
+    background-color: var(--primary);
     width: 100vw;
-    margin-bottom: 3%;
   }
 
   .featured_text {
-    color: var(--primary);
+    color: var(--darkRed);
     padding-top: 3%;
   }
 
@@ -27,11 +26,10 @@
   
   .featured_cards__wrapper {
     position: relative;
-    margin: 50px 0 45px;
+    margin: 50px 0 4px;
   }
   
   .featured_cards__items {
-    margin-bottom: 24px;
     list-style: none;
   }
 
@@ -40,6 +38,7 @@
     width: 30rem;
     height: 25rem;
     margin: 1rem;
+    align-items: center;
 }
 
   .featured_cards__item__link {
@@ -51,7 +50,7 @@
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     border-radius: 10px;
     overflow: hidden;
-    background-color: var(--primary); /* color of background of description */
+    background-color: var(--darkRed); /* color of background of description */
     margin-top: -5%;
     text-decoration: none;
   }
@@ -105,9 +104,10 @@
   }
   
   .featured_cards__item__text {
-    color: var(--darkRed);
+    color: var(--primary);
     font-size: 18px;
     line-height: 24px;
+    text-align: center;
   }
   
   @media only screen and (min-width: 1200px) {
@@ -120,10 +120,22 @@
     .featured_cards__items {
       display: flex;
     }
+
+    .featured_cards__item {
+      margin-bottom: 1rem;
+      width: 100%
+    }
+
   }
   
-  @media only screen and (max-width: 1024px) {
+  /* Mobile screens (below 768px) */
+  @media only screen and (max-width: 767px) {
     .featured_cards__item {
-      margin-bottom: 2rem;
+      width: 90%; /* Full width with padding */
+      margin: 0rem auto; /* Center the cards */
+    }
+
+    .featured_text {
+      margin-top: 5%;
     }
   }

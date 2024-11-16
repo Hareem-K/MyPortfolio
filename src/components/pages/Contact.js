@@ -58,6 +58,8 @@ export default function Contact() {
 
             </div>
 
+            {/* <img src="images/Profile_QR.png" alt="QRCode" className='QR' /> */}
+
             <Footer />
         </>
     );

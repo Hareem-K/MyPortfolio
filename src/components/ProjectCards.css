@@ -1,121 +1,154 @@
 .project_cards {
-    padding: 4rem;
-    background-color: var(--primary);
-  }
-  
-  h1 {
-    text-align: center;
-    color: var(--darkRed)
-  }
-  
-  .Projetc_cards__container {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    max-width: 1120px;
-    width: 90%;
-    margin: 0 auto;
-  }
-  
-  .Project_cards__wrapper {
-    position: relative;
-    margin: 50px 0 45px;
-  }
-  
+  padding: 4rem;
+  background-color: var(--primary);
+}
+
+.projects {
+  font-size: 6rem !important;
+}
+
+/* Instructions Text */
+.Project_Instructions {
+  text-align: center;
+  color: var(--darkRed);
+}
+
+/* Container for Cards */
+.Project_cards__container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  max-width: 1120px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.Project_cards__wrapper {
+  position: relative;
+  margin: 50px 0 45px;
+}
+
+/* Cards Items */
+.Project_cards__items {
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: space-between; /* Even spacing between cards */
+  gap: 2rem; /* Add spacing between cards */
+}
+
+/* Individual Card */
+.Project_cards__item {
+  display: flex;
+  flex: 1;
+  margin: 1rem; /* Add consistent spacing between cards */
+  border-radius: 40px;
+  width: calc(48% - 2rem); /* Two cards per row with spacing */
+  max-width: 650px; /* Prevent overly large cards */
+  min-width: 300px; /* Prevent cards from shrinking too much */
+}
+
+/* Card Link */
+.Project_cards__item__link {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  box-shadow: 0 6px 20px grey;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--darkRed);
+  text-decoration: none;
+}
+
+/* Card Image Wrapper */
+.Project_cards__item__pic-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 67%; /* Maintain aspect ratio */
+  overflow: hidden;
+}
+
+.Project_cards__item__pic-wrap::after {
+  content: attr(data-category);
+  position: absolute;
+  bottom: 0;
+  padding: 6px 8px;
+  max-width: calc(100% - 60px);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--darkRed);
+  background-color: var(--primary);
+}
+
+/* Card Image */
+.Project_cards__item__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.2s linear;
+}
+
+.Project_cards__item__img:hover {
+  transform: scale(1.1);
+}
+
+/* Card Info */
+.Project_cards__item__info {
+  padding: 10px 30px 0px;
+}
+
+.Project_cards__item__text {
+  color: var(--primary);
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+/* Large screens (>= 1024px) */
+@media only screen and (min-width: 1024px) {
   .Project_cards__items {
-    margin-bottom: 24px;
-    list-style: none !important;
+    gap: 2rem; /* Ensure consistent spacing */
   }
-  
+
   .Project_cards__item {
-    display: flex;
-    flex: 1;
-    margin: 0 1rem !important;
-    border-radius: 40px !important;
+    width: calc(48% - 2rem); /* Two cards per row with spacing */
   }
-  
-  .Project_cards__item__link {
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-    box-shadow: 0 6px 20px grey;
-    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: var(--darkRed);
-    text-decoration: none;
+}
+
+/* Medium screens (< 1024px) */
+@media only screen and (max-width: 1024px) {
+  .Project_cards__item {
+    width: 100%; /* One card per row */
+    margin-bottom: 2rem; /* Add spacing between rows */
   }
-  
-  .Project_cards__item__pic-wrap {
-    position: relative;
-    width: 100%;
-    padding-top: 67%;
-    overflow: hidden;
+}
+
+/* Mobile screens (< 768px) */
+@media only screen and (max-width: 767px) {
+  .projects {
+    font-size: 5rem !important;
   }
-  
-  .Project_fade-img {
-    animation-name: fade-img;
-    animation-duration: 2s;
+
+  .Project_Instructions {
+    font-size: 1.25rem; /* Smaller text for instructions */
   }
-  
-  .Project_cards__item__pic-wrap::after {
-    content: attr(data-category);
-    position: absolute;
-    bottom: 0;
-    padding: 6px 8px;
-    max-width: calc((100%) - 60px);
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--darkRed);
-    background-color: var(--primary);
-    box-sizing: border-box;
+
+  .Project_cards__item {
+    width: 95%; /* Slightly wider cards on mobile */
+    margin: 1rem auto; /* Center cards with spacing */
   }
-  
-  .Project_cards__item__img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    transition: all 0.2s linear;
-  }
-  
-  .Project_cards__item__img:hover {
-    transform: scale(1.1);
-  }
-  
-  .Project_cards__item__info {
-    padding: 10px 30px 0px;
-  }
-  
+
   .Project_cards__item__text {
-    color: var(--primary);
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
+    font-size: 16px; /* Adjust font size for readability */
   }
-  
-  @media only screen and (min-width: 1200px) {
-    .Project_content__blog__container {
-      width: 84%;
-    }
+
+  .Project_cards__item__pic-wrap::after {
+    font-size: 14px; /* Adjust label size */
   }
-  
-  @media only screen and (min-width: 1024px) {
-    .Project_cards__items {
-      display: flex;
-    }
-  }
-  
-  @media only screen and (max-width: 1024px) {
-    .Project_cards__item {
-      margin-bottom: 2rem;
-    }
-  }
+}

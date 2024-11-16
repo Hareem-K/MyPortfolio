@@ -1,58 +1,88 @@
+/* Base styles for the video */
 video {
-    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    position: fixed;
-    z-index: -1;
+    object-fit: cover; /* Ensures the video covers the container */
+    z-index: -1; /* Keeps it in the background */
 }
-  
+
+/* Styles for the hero container */
 .hero-container {
-    /* background: url('../../public/images/purple.jpg') center center/cover no-repeat; */
+    position: relative; /* Required for proper layering */
     height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row; /* Default layout */
+    justify-content: space-between;
     align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    object-fit: contain;
+    padding: 0 5%; /* Adds padding to the sides */
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)); /* Adjust transparency for a softer shadow */
+    overflow: hidden; /* Prevents content overflow */
 }
 
-.hero-container > h1 {
-    color: #5B242A;
-    font-size: 100px;
-    margin-top: -100px;
+/* Optional resets for pseudo-elements */
+.hero-container::before,
+.hero-container::after {
+    content: none;
 }
 
-.hero-container > p {
-    text-align: center;  /* center-align the text */
-    margin-top: 8px;
-    color: #5B242A;
-    font-size: 32px;
-    max-width: 1000px;
+/* Content styles */
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    color: var(--darkRed);
 }
 
+.cta-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.cta-content p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Image styles */
 .image {
-    width: 200px;
-    height: 200px;
+    width: 300px; /* Updated for larger image */
+    height: 300px;
     border-radius: 50%;
+    z-index: 1;
+    margin-right: 4rem; /* Default margin for alignment */
 }
 
-
+/* Media Queries for responsiveness */
 @media screen and (max-width: 960px) {
-.hero-container > h1 {
-    font-size: 70px;
-    margin-top: -150px;
-}
+    .hero-container {
+        flex-direction: column-reverse; /* Stack image on top of content */
+        padding: 9%;
+    }
+
+    .cta-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .image {
+        margin: 0 auto 20px; /* Center the image and add spacing */
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .hero-container > h1 {
-        font-size: 50px;
-        margin-top: -100px;
+    .cta-content h1 {
+        font-size: 2.5rem;
     }
 
-    .hero-container > p {
-        font-size: 30px;
+    .cta-content p {
+        font-size: 1rem;
     }
+
 }

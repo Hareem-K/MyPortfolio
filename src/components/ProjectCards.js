@@ -5,7 +5,7 @@ import ProjectCardItem from './ProjectCardItem';
 function ProjectCards() {
   return (
     <div className='project_cards'>
-      <h1>Click on a Project to View it's Description and GitHub Repository </h1>
+      <h1 className='Project_Instructions'>Click on a Project to View it's Description and GitHub Repository </h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
         <ul className='cards__items'>
