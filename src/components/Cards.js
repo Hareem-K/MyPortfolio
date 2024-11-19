@@ -4,7 +4,6 @@ import './Cards.css';
 function Cards() {
   return (
     <div className='cards'>
-      <h1 className='lets_get_started'>Lets Get Started!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
             <ul className='cards__items'>
@@ -37,8 +36,7 @@ function Cards() {
                 <CardItem
                 src="images/contact1.jpg"
                 text="Ready to make a connection? The contact page is the place to reach out. Whether you have questions, opportunities, 
-                      or just want to say hello, I'm just a message away. Connect with me on LinkedIn or shoot me an email. Don't forget 
-                      to explore my projects on GitHub."
+                      or just want to say hello, I'm just a message away. Connect with me on LinkedIn, email, or explore my projects on GitHub."
                 label='Contact'
                 path='/contact'
                 openInNewTab={false}

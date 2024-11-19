@@ -1,13 +1,13 @@
 .GitHub-Button {
     cursor: pointer;
-    background-color: var(--primary);
-    color: var(--darkRed);
+    background-color: var(--black);
+    color: var(--white);
     border: 1px #cac0b5;
-    box-shadow: 0 6px 20px black;
     height: 20px;
 }
 
 .GitHub-Button:hover {
-    background-color: #cac0b5; /* a bit darker than --primary*/
+    background-color: var(--white); /* a bit darker than --primary*/
+    color: var(--black);
     transition: background-color 0.3s ease, color 0.3s ease;
 }

@@ -1,5 +1,5 @@
 .navbar {
-  background: var(--darkRed);
+  background: var(--white);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -8,6 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 999;
+  filter: drop-shadow(0 6px 20px lightgrey);
 }
 .navbar-container {
   display: flex;
@@ -17,7 +18,7 @@
   max-width: 1500px;
 }
 .navbar-logo {
-  color: #E2D6C9;
+  color: var(--black);
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
@@ -45,7 +46,7 @@
   height: 30px;
 }
 .nav-links {
-  color: #E2D6C9;
+  color: var(--black);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -53,14 +54,14 @@
   height: 100%;
 }
 .nav-links.active {
-  border-bottom: 4px solid #E2D6C9;
+  border-bottom: 4px solid var(--primary);
 }
 .nav-links:hover {
-  border-bottom: 4px solid #E2D6C9;
+  border-bottom: 4px solid var(--primary);
   transition: all 0.2s ease-out;
 }
 .fa-bars {
-  color: #E2D6C9;
+  color: var(--black) !important;
 }
 .nav-links-mobile {
   display: none;
@@ -69,9 +70,14 @@
   display: none;
 }
 
+.my--button {
+  background: var(--primary);
+  color: var(--black);
+}
+
 @media screen and (max-width: 960px) {
   .navbar {
-    position: relative;
+    position: sticky;
   }
 
   .nav-menu {
@@ -84,7 +90,7 @@
     position: absolute;
     top: 80px;
     left: -320px !important;
-    background: var(--darkRed);
+    background: var(--white);
     opacity: 0;
     transition: all 0.5s ease;
   }
@@ -106,7 +112,6 @@
   }
 
   .nav-links:hover {
-    background-color: #E2D6C9;
     color: #242424;
     border-radius: 0;
   }
@@ -123,7 +128,7 @@
 
   .fa-bars,
   .fa-times {
-    color: #E2D6C9;
+    color: var(--black);
     font-size: 2rem;
   }
 
@@ -143,15 +148,15 @@
     text-decoration: none;
     font-size: 1.8rem; /* Increase font size for the button */
     background-color: transparent;
-    color: #E2D6C9;
+    color: var(--primary);
     padding: 16px 24px; /* Increase padding for a bigger button */
-    border: 2px solid #E2D6C9; /* Thicker border for emphasis */
+    border: 2px solid var(--primary); /* Thicker border for emphasis */
     transition: all 0.3s ease-out;
   }
 
   .nav-links-mobile:hover {
-    background: #E2D6C9;
-    color: #242424;
+    background: var(--primary);
+    color: var(--black);
     transition: 250ms;
   }
 
@@ -162,8 +167,8 @@
   }
 
   .my--button:hover {
-    background: #E2D6C9;
-    color: #242424;
+    background: var(--primary);
+    color: var(--black);
   }
 
   

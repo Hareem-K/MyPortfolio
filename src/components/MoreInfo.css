@@ -1,7 +1,7 @@
 #more-info {
     padding: 50px;
-    background-color: var(--darkRed);
-    color: var(--primary);
+    background-color: var(--primary);
+    color: var(--black);
     text-align: center;
 }
 

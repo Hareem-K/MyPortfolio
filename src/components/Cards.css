@@ -1,11 +1,6 @@
 .cards {
   padding: 3rem;
-  background: #E2D6C9 !important; /* new color */
-}
-
-.lets_get_started {
-  text-align: center;
-  color: #5B242A;
+  background: var(--white); /* new color */
 }
 
 .cards__container {
@@ -66,8 +61,8 @@
   max-width: calc((100%) - 60px);
   font-size: 18px;
   font-weight: 700;
-  color: #5B242A !important;
-  background-color: #E2D6C9 !important;
+  color: var(--white) !important;
+  background-color: var(--black) !important;
   box-sizing: border-box;
 }
 
@@ -95,9 +90,10 @@
 }
 
 .cards__item__text {
-  color: #E2D6C9 !important;
-  background-color: #5B242A;
+  color: var(--black) !important;
+  background-color: var(--primary);
   font-size: 18px;
+  font-weight: 100 !important;
   line-height: 24px;
   padding: 10px;
   margin-top: -50px;

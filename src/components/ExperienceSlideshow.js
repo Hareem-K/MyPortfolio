@@ -13,16 +13,14 @@ function ExperienceSlideshow() {
       title: "On Campus Operations Manager",
       date: "Jan 2024 – July 2024",
       details: [
-        "Supervised operations staff to manage student sign-ins, ensuring smooth book pick-ups for over 100 students, while creating custom prep bundles and maintaining a master Excel sheet with updates from the student database.",
-        "Coordinated supply deliveries and verified orders for quality assurance, supporting seamless book distribution and contributing to students' exam success.",
+        "Supervised operations staff to manage student sign-ins, ensuring smooth book pick-ups for over 100 students, while creating custom prep bundles and maintaining a master Excel sheet with updates from the student database. Coordinated supply deliveries and verified orders for quality assurance, supporting seamless book distribution and contributing to students' exam success.",
       ],
     },
     {
       title: "On Campus Operations Staff",
       date: "Aug 2022 – Jan 2024",
       details: [
-        "Worked with Operations Managers to ensure smooth prep sessions by providing study materials, creating custom prep bundles, and preparing sign-in desks to assist hundreds of students.",
-        "Assisted students by answering questions, helping them find session locations, and adapting communication styles to optimize message delivery.",
+        "Worked with Operations Managers to ensure smooth prep sessions by providing study materials, creating custom prep bundles, and preparing sign-in desks to assist hundreds of students. Assisted students by answering questions, helping them find session locations, and adapting communication styles to optimize message delivery.",
       ],
     },
     {
@@ -54,16 +52,13 @@ function ExperienceSlideshow() {
               UI/UX - Front End Developer | Tech Start, University of Calgary
             </h2>
             <h4 className="date">Oct 2024 - Present</h4>
-            <ul className="circle-list">
-              <li>
+            <div className="description">
+              <p>
                 Design intuitive UI/UX using FigJam and develop a React.js and CSS-based event hosting platform with features like personalized 
-                QR profiles, itinerary management, and AI-driven networking tools.
-              </li>
-              <li>
-                Streamline event management through tools for budgeting, inventory tracking, and attendee check-in logs, enhancing the 
-                experience for organizers and participants.
-              </li>
-            </ul>
+                QR profiles, itinerary management, and AI-driven networking tools. Streamline event management through budgeting tools, 
+                inventory tracking, and attendee check-in logs to enhance the experience for organizers and participants.
+              </p>
+            </div>
           </div>
         </div>
       ),
@@ -79,19 +74,19 @@ function ExperienceSlideshow() {
               </h2>
               <h4 className="date">Oct 2024 - Present</h4>
   
-              <ul className="circle-list">
-                <li>Address client-reported issues efficiently by triaging ServiceNow tickets and collaborating with development 
-                    teams using Jira for bug fixes and feature requests.</li>
-                <li>Enhance system usability through quality assurance testing, creating user documentation, and supporting 
-                    high-priority tasks for strategic initiatives.</li>
-              </ul>
+              <div className="description">
+                <p>Address client-reported issues efficiently by triaging ServiceNow tickets and collaborating with development 
+                    teams using Jira for bug fixes and feature requests. Enhance system usability through quality assurance 
+                    testing, user documentation, and support for high-priority strategic initiatives.
+                </p>
+              </div>
             </div>
           </div>
         ),
     },
 
     {
-      image: "/images/Experience/prep101.png",
+      image: "/images/Experience/prep101.jpg",
       description: (
         <div className="text-container">
           <div className="experience-item">
@@ -99,7 +94,7 @@ function ExperienceSlideshow() {
               {["Operations Manager", "Operations Staff", "Online Marketer"].map((label, index) => (
                 <Button
                   key={index}
-                  buttonStyle="btn--outline-inverse"
+                  buttonStyle="btn--download"
                   buttonSize="btn--medium"
                   onClick={() => setActiveRole(index)}
                   external={false}
@@ -111,11 +106,11 @@ function ExperienceSlideshow() {
             <div className="prep101-role-details">
               <h3 className="role-title">{prep101Roles[activeRole].title}</h3>
               <h4 className="date">{prep101Roles[activeRole].date}</h4>
-              <ul className="circle-list">
+              <div className="description">
                 {prep101Roles[activeRole].details.map((detail, idx) => (
-                  <li key={idx}>{detail}</li>
+                  <p key={idx}>{detail}</p>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -130,17 +125,20 @@ function ExperienceSlideshow() {
               Web Content Coordinator | University of Calgary, Digital Experience
             </h2>
             <h4 className="date">Nov 2023 - July 2024</h4>
-            <ul className="circle-list">
-                <li>Enhanced user experience by meticulously updating content and revising webpages, ensuring accuracy and aesthetic appeal, resulting in the creation of over 700 pages.</li>
-                <li>Established an organized tracking system and consistently updated the master Excel list of content slated for migration, streamlining project management and progress monitoring within a scrum methodology.</li>
-                <li>Conducted rigorous testing and quality assurance measures to ensure flawless functionality and performance of revamped web pages, contributing to an error-free user experience.</li>
-            </ul>
+            <div className="description">
+                <p>
+                Enhanced user experience by updating and refining web content to ensure accuracy, aesthetic appeal, and the successful creation of over 700 pages. 
+                Streamlined project management and progress tracking through an organized system and updated master Excel list, working seamlessly within a scrum 
+                methodology. Conducted thorough testing and quality assurance to deliver flawless functionality and a seamless user experience across revamped web 
+                pages.
+                </p>
+            </div>
           </div>
         </div>
       ),
     },
     {
-      image: "/images/Experience/glenbowconstruction.png",
+      image: "/images/Experience/glenbow.png",
       description: (
         <div className="text-container">
           <div className="experience-item">
@@ -148,11 +146,14 @@ function ExperienceSlideshow() {
               Administrative & Marketing Assistant | Glenbow Construction
             </h2>
             <h4 className="date">Jan 2021 – Aug 2023</h4>
-            <ul className="circle-list">
-              <li>Provided administrative support by coordinating with clients, construction workers, and suppliers, managing the company’s expense account, and ensuring timely payment of bills and accurate transaction records.</li>
-              <li>Promoted the company and secured new projects by maintaining a personable telemarketing and social media presence while liaising with suppliers to obtain quotes, ensure timely material deliveries, and support project schedules.</li>
+            <div className="description">
+              <p>
+              Provided administrative support by coordinating with clients, construction workers, and suppliers, while managing the company’s expense account to
+               ensure accurate records and timely payments. Promoted the company and secured new projects through a personable telemarketing and social media 
+               presence, effectively liaising with suppliers to obtain quotes, ensure timely deliveries, and maintain project schedules.
+              </p>
 
-            </ul>
+            </div>
           </div>
         </div>
       ),

@@ -15,18 +15,12 @@ video {
     height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: row; /* Default layout */
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
     padding: 0 5%; /* Adds padding to the sides */
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)); /* Adjust transparency for a softer shadow */
     overflow: hidden; /* Prevents content overflow */
-}
-
-/* Optional resets for pseudo-elements */
-.hero-container::before,
-.hero-container::after {
-    content: none;
 }
 
 /* Content styles */
@@ -35,6 +29,8 @@ video {
     flex-direction: column;
     max-width: 50%;
     color: var(--darkRed);
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text alignment */
 }
 
 .cta-content h1 {
@@ -47,7 +43,6 @@ video {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
     line-height: 1.5;
-    text-align: center;
 }
 
 /* Image styles */
@@ -56,27 +51,33 @@ video {
     height: 300px;
     border-radius: 50%;
     z-index: 1;
-    margin-right: 4rem; /* Default margin for alignment */
+    margin: 20px auto; /* Center the image */
 }
+
+.white-button {
+    background-color: var(--white); /* White background */
+    color: var(--darkRed); /* Dark red text */
+    border: 2px solid #5B242A; /* Dark red border */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+  }
+  
+  .white-button:hover {
+    background-color: #E2D6C9; /* Slightly darker white/cream hover effect */
+    color: #242424; /* Change text color on hover */
+  }
+  
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 960px) {
     .hero-container {
-        flex-direction: column-reverse; /* Stack image on top of content */
+        flex-direction: column; /* Stack elements vertically */
         padding: 9%;
     }
 
     .cta-content {
         max-width: 100%;
-        text-align: center;
     }
 
-    .image {
-        margin: 0 auto 20px; /* Center the image and add spacing */
-    }
-}
-
-@media screen and (max-width: 768px) {
     .cta-content h1 {
         font-size: 2.5rem;
     }
@@ -85,4 +86,7 @@ video {
         font-size: 1rem;
     }
 
+    .image {
+        margin: 0 auto 20px; /* Center the image and add spacing */
+    }
 }

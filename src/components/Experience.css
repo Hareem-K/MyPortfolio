@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: var(--primary);
+    background-color: var(--white);
 }
 
 * {
@@ -11,18 +11,17 @@ body {
 .work {
     background-color: var(--primary);
     color: var(--darkRed);
-    margin-top: 1.5%;
+    padding-bottom: 2% !important;
+    padding-top: 1%;
 }
 
 .awards-title {
-    color: var(--primary);
-    margin-top: 30px; /* Increased space above awards title */
-    text-decoration: underline;
+    color: var(--black);
 }
 
 .credentials {
-    background-color: var(--darkRed);
-    color: var(--primary);
+    background-color: var(--white);
+    color: var(--black);
     padding-top: 1px; /* Add space inside the div at the top */
     padding-bottom: 20px; /* Add space inside the div at the bottom */
     margin-top: 30px; /* Adds space above the div */
@@ -88,5 +87,9 @@ body {
         margin-top: 5px; /* Add some space above the date */
         font-size: 1rem; /* Adjust font size for mobile */
         color: var(--darkRed); /* Keep consistent styling */
+    }
+
+    .work {
+        padding-bottom: 4% !important;
     }
 }

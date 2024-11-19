@@ -20,24 +20,27 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+  min-height: 70vh;
 }
 
 .resume {
-  background-image: url('/public/images/beige-stroke2.jpg');
+  background-image: url('/public/images/beigeBlobs-transformed.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--darkRed);
   font-size: 100px;
+  image-rendering: crisp-edges;
 }
 
 .projects {
-  background-image: url('/public/images/texture.jpg');
+  background-image: url('/public/images/beigeBlobs4-transformed.jpeg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--darkRed);
   font-size: 100px;
+  image-rendering: crisp-edges;
 }
 
 .experience {
@@ -47,6 +50,7 @@ body {
   background-repeat: no-repeat;
   color: var(--darkRed);
   font-size: 100px;
+  padding: 261px 0; 
 }
 
 .contact {
@@ -56,4 +60,5 @@ body {
   background-repeat: no-repeat;
   color: var(--darkRed);
   font-size: 100px;
+  padding: 261px 0; 
 }

@@ -1,6 +1,6 @@
 .project_cards {
   padding: 4rem;
-  background-color: var(--primary);
+  background-color: var(--white);
 }
 
 .projects {
@@ -56,7 +56,7 @@
   box-shadow: 0 6px 20px grey;
   border-radius: 10px;
   overflow: hidden;
-  background-color: var(--darkRed);
+  background-color: var(--primary);
   text-decoration: none;
 }
 
@@ -76,8 +76,8 @@
   max-width: calc(100% - 60px);
   font-size: 15px;
   font-weight: 700;
-  color: var(--darkRed);
-  background-color: var(--primary);
+  color: var(--white);
+  background-color: var(--black);
 }
 
 /* Card Image */
@@ -104,10 +104,12 @@
 }
 
 .Project_cards__item__text {
-  color: var(--primary);
+  color: var(--black);
+  background-color: var(--primary);
   font-size: 18px;
   line-height: 24px;
   text-align: center;
+  font-weight: 150;
 }
 
 /* Large screens (>= 1024px) */

@@ -50,7 +50,7 @@
 
 .awardDate {
     font-size: 1.2rem;
-    color: var(--primary);
+    color: var(--black);
     text-align: center; /* Center text */
 
 }
@@ -61,6 +61,17 @@
     justify-content: center;
     margin-bottom: 10px;
     gap: 8px; /* Add spacing between buttons */
+}
+
+.description {
+    text-align: center;
+}
+
+/* Customize the arrows */
+.slick-prev:before,
+.slick-next:before {
+  color: var(--black) !important; /* Set the desired color */
+  font-size: 24px; /* Adjust size if needed */
 }
 
 /* Media queries for mobile view */
@@ -84,5 +95,6 @@
     .prep101-progress-bar .btn {
         font-size: 0.8rem; /* Reduce button font size */
         padding: 6px 15px; /* Smaller button padding */
+        text-align: center;
     }
 }

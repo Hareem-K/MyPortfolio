@@ -22,8 +22,8 @@ function HeroSection() {
   return (
     <div className="hero-container">
       <video autoPlay loop muted playsInline>
-        <source src="/videos/beige-flow1-720p.mp4" type="video/mp4" media="(max-width: 768px)" />
-        <source src="/videos/beige-flow1.mp4" type="video/mp4" />
+        <source src="/videos/AdobeStock_715822779 (1).mov" type="video/mp4" media="(max-width: 768px)" />
+        <source src="/videos/AdobeStock_715822779 (1).mov" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -40,26 +40,25 @@ function HeroSection() {
             justifyContent: 'center',
             paddingBottom: '50px',
             paddingTop: '30px',
-            maxWidth: '197px',
-            margin: '0 auto',
           }}
         >
           <Button
-            className="btns"
+            className="btns white-button"
             buttonStyle="btn--download"
             buttonSize="btn--large"
-            onClick={handleScroll} // Trigger the scroll
+            onClick={handleScroll}
+            style={{ width: '250px' }}
           >
-            Learn More <i className="fas fa-arrow-right"></i>
+            Check Me Out <i className="fas fa-arrow-right"></i>
           </Button>
         </div>
       </div>
 
-      <img
+      {/* <img
         className="image"
         src="https://i.postimg.cc/SNJFPCpS/photo.png"
         alt="Hareem Khan"
-      />
+      /> */}
     </div>
   );
 }

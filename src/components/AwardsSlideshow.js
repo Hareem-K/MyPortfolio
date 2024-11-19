@@ -20,7 +20,7 @@ function AwardsSlideshow() {
       image: "/images/Experience/AIFundamentals.png",
       title: "Artificial Intelligence Fundamentals | IBM SkillsBuild",
       date: "Sept 2024",
-      details: [ "Explores the evolution of AI, from its historical milestones to modern advancements, emphasizing machine learning and data analysis techniques that drive predictions and decisions.", "Demonstrates expertise in natural language processing, image analysis, and generative AI, showcasing how neural networks power innovative applications in today's technological landscape.", "Designs ethical AI models in IBM Watson Studio, ensuring minimal bias and aligning solutions with responsible AI principles while identifying career opportunities and key skills in the AI field." ],
+      details: [ "Exploring the evolution of AI from its historical milestones to modern advancements, with a focus on machine learning and data analysis techniques that drive predictions and decisions. Demonstrated expertise in natural language processing, image analysis, and generative AI, highlighting how neural networks power innovative applications. Designed ethical AI models in IBM Watson Studio, ensuring minimal bias, aligning solutions with responsible AI principles, and identifying career opportunities and essential skills in the AI field." ],
       button: {
         text: "View Credential",
         link: "https://www.credly.com/badges/9f4cba7a-6446-40f1-9122-e0bcc3fe6df4/public_url"
@@ -30,7 +30,7 @@ function AwardsSlideshow() {
       image: "/images/Experience/WebDevFundamentals.png",
       title: "Web Development Fundamentals Credential | IBM SkillsBuild",
       date: "Mar 2024",
-      details: [ "Demonstrates proficiency in front-end and back-end development, understanding the software development lifecycle, agile methodologies, and the interplay of HTML, CSS, and JavaScript in creating dynamic web applications.", "Explores techniques for integrating JavaScript into HTML, managing data with MySQL, and applying robust testing strategies, including automated testing, version control, and responsive design principles to ensure quality.", "Applies advanced practices like DevOps and continuous delivery for seamless web deployment while identifying key career opportunities and skill sets for professional development in web development." ],
+      details: [ "Demonstrating proficiency in front-end and back-end development, with a strong understanding of the software development lifecycle, agile methodologies, and the interplay of HTML, CSS, and JavaScript in creating dynamic web applications. Explored techniques for integrating JavaScript into HTML, managing data with MySQL, and applying robust testing strategies, including automated testing, version control, and responsive design principles to ensure quality. Applied advanced practices like DevOps and continuous delivery for seamless web deployment while identifying key career opportunities and essential skill sets in web development." ],
       button: {
         text: "View Credential",
         link: "https://www.credly.com/badges/6a0adff7-21be-4060-8802-bc397cfef050/public_url"
@@ -61,9 +61,7 @@ function AwardsSlideshow() {
       title: "Innovation and Core Concepts of Engineering Entrepreneurship Certificate | University of Calgary",
       date: "Oct 2022",
       details: [
-        "Immersed in core concepts of innovation and engineering entrepreneurship.",
-        "Gained an understanding of the engineering entrepreneurship journey, developed an entrepreneurial mindset, recognized opportunities, and developed competence in creating business models.",
-        "Built and developed key interpersonal skills, including forming a startup team, mastering project management essentials, and enhancing communication, teamwork, adaptability, and resilience."
+        "Immersed in core concepts of innovation and engineering entrepreneurship, gaining an understanding of the entrepreneurial journey, developing a mindset to recognize opportunities, and creating business models. Built key interpersonal skills, including forming a startup team, mastering project management essentials, and enhancing communication, teamwork, adaptability, and resilience.",
       ],
       button: {
         text: "View Credential",
@@ -104,16 +102,16 @@ function AwardsSlideshow() {
                 <div className="text-container">
                     <h2 className="role-title">{award.title}</h2>
                     <div className="awardDate">{award.date}</div>
-                    <ul className="circle-list">
+                    <div className="description">
                     {award.details.map((detail, idx) => (
-                        <li key={idx}>{detail}</li>
+                        <p key={idx}>{detail}</p>
                     ))}
-                    </ul>
+                    </div>
                     {award.button && (
                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                         <Button
                         className='btns'
-                        buttonStyle='btn--credential'
+                        buttonStyle='btn--download'
                         buttonSize='btn--large'
                         linkTo={award.button.link}
                         external
