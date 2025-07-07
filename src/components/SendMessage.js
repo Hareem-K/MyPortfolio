@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from './Button';
 import "./SendMessage.css";
+import emailjs from '@emailjs/browser';
 
 export default function SendMessage() {
     const [formData, setFormData] = useState({
@@ -9,97 +10,113 @@ export default function SendMessage() {
         message: ''
     });
 
-    const [loading, setLoading] = useState(false); // New loading state
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async () => {
-        // name, email, and message fields are all required
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
         if (!formData.name || !formData.email || !formData.message) {
             alert('Please fill out all fields.');
             return;
         }
 
-        setLoading(true); // Set loading to true when submission starts
+        setLoading(true);
 
-        try {
-            const response = await fetch('https://formsubmit.co/hareemkhan@gmail.com', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
-            if (response.ok) {
-                alert('Message sent successfully!');
-                // Clear form fields after successful submission
-                setFormData({
-                    name: '',
-                    email: '',
-                    message: ''
-                });
-            } else {
-                alert('Failed to send message. Please try again later.');
-            }
-        } catch (error) {
-            console.error('Error:', error);
+        emailjs.send(
+            'service_xcmuprg',
+            'template_wbmtvuc',
+            {
+                from_name: formData.name,
+                from_email: formData.email,
+                message: formData.message,
+            },
+            'jTgMDDl0Gh9lXuOh5'
+        )
+        .then(() => {
+            alert('Message sent successfully!');
+            setFormData({ name: '', email: '', message: '' });
+        })
+        .catch((error) => {
+            console.error('EmailJS Error:', error);
             alert('Failed to send message. Please try again later.');
-        }
-
-        setLoading(false); // Set loading to false after submission is complete
+        })
+        .finally(() => setLoading(false));
     };
 
     return (
-        <>  
-            <div className='form-box'>
-                {/* <img src="images/Profile_QR.png" alt="QRCode" className='QR' /> */}
-                <h3 className='contact-message'>Feel free to send me a message for any inquiries, opportunities, and more!</h3>
+        <div className='form-box'>
+            <h3 className='contact-message'>Feel free to send me a message for any inquiries, opportunities, and more!</h3>
+            <form onSubmit={handleSubmit}>
                 <div className='form-group'>
-                    <input 
-                        className='form-control' 
-                        id='name' 
-                        type='text' 
-                        name='name' 
-                        placeholder='Name' 
+                    <input
+                        className='form-control'
+                        type='text'
+                        name='name'
+                        placeholder='Name'
                         value={formData.name}
                         onChange={handleChange}
                         required
                     />
                 </div>
                 <div className='form-group'>
-                    <input 
-                        className='form-control' 
-                        id='email' 
-                        type='email' 
-                        name='email' 
-                        placeholder='Email' 
+                    <input
+                        className='form-control'
+                        type='email'
+                        name='email'
+                        placeholder='Email'
                         value={formData.email}
                         onChange={handleChange}
                         required
                     />
                 </div>
                 <div className='form-group'>
-                    <textarea 
-                        className='form-control' 
-                        id='message' 
-                        name='message' 
-                        placeholder="Your Message..."
+                    <textarea
+                        className='form-control'
+                        name='message'
+                        placeholder='Your Message...'
                         value={formData.message}
                         onChange={handleChange}
                         required
                     ></textarea>
                 </div>
-                <input type="hidden" name="_subject" value="New Email!"></input>
-                <Button 
-                    onClick={handleSubmit} 
-                    buttonStyle="btn--download"
-                    disabled={loading} // Disable button while loading
+                <button
+                    type="submit"
+                    disabled={loading}
+                    style={{
+                        padding: '8px 20px',
+                        borderRadius: '15px',
+                        fontSize: '16px',
+                        fontWeight: '500',
+                        cursor: loading ? 'not-allowed' : 'pointer',
+                        transition: 'all 0.3s ease-out',
+                        color: 'white',
+                        backgroundColor: 'black',
+                        border: '1px solid black'
+                    }}
+                    onMouseEnter={(e) => {
+                        if (!loading) {
+                            e.currentTarget.style.backgroundColor = 'white';
+                            e.currentTarget.style.color = 'black';
+                            e.currentTarget.style.border = '1px solid black';
+                        }
+                    }}
+                    onMouseLeave={(e) => {
+                        if (!loading) {
+                            e.currentTarget.style.backgroundColor = 'black';
+                            e.currentTarget.style.color = 'white';
+                            e.currentTarget.style.border = '1px solid black';
+                        }
+                    }}
                 >
-                    {loading ? 'Sending...' : 'Send Message'} {/* Conditionally render button text */}
-                </Button>
-            </div>
-        </>
+                    {loading ? 'Sending...' : 'Send Message'}
+                </button>
+
+
+            </form>
+        </div>
     );
 }
