@@ -61,12 +61,6 @@
 }
 
 /* Card Image Wrapper */
-.Project_cards__item__pic-wrap {
-  position: relative;
-  width: 100%;
-  padding-top: 67%; /* Maintain aspect ratio */
-  overflow: hidden;
-}
 
 .Project_cards__item__pic-wrap::after {
   content: attr(data-category);
@@ -112,6 +106,221 @@
   font-weight: 150;
 }
 
+.Project_buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.Project-btn {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.05s ease, box-shadow 0.15s ease;
+}
+
+.Project-btn:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.Project-btn:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+.Project-btn--github i,
+.Project-btn--site i {
+  margin-right: 0.5rem;
+}
+
+
+/* Ensure the figure has a box */
+.Project_cards__item__pic-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;   /* controls height */
+  min-height: 180px;      /* safety on small screens */
+}
+
+/* Slider container */
+.Project_slider {
+  position: absolute;
+  inset: 0;               /* top:0 right:0 bottom:0 left:0 */
+}
+.Project_slider__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Arrows (z-index so they don’t hide the image, and pointer-only) */
+.Project_slider__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: transform 0.05s ease, box-shadow 0.15s ease, background 0.2s ease;
+  z-index: 2;
+  user-select: none;
+}
+.Project_slider__arrow--left { left: 0.5rem; }
+.Project_slider__arrow--right { right: 0.5rem; }
+
+/* Dots */
+.Project_slider__dots {
+  position: absolute;
+  bottom: 0.5rem; left: 0; right: 0;
+  display: flex; justify-content: center; gap: 0.4rem;
+  z-index: 2;
+}
+.Project_slider__dot {
+  width: 7px; height: 7px; border-radius: 9999px;
+  background: rgba(255,255,255,0.6);
+}
+.Project_slider__dot.is-active { background: rgba(255,255,255,0.95); }
+
+
+
+/* --- Expand button on the card (top-left) --- */
+.Project_expandBtn {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 3;
+  border: none;
+  background: rgba(255,255,255,0.95);
+  width: 2rem; height: 2rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.Project_expandBtn:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.16);
+}
+
+/* --- Modal overlay --- */
+.Project_modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55); /* dim background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;                 /* space from edges */
+  z-index: 1000;
+}
+
+/* --- Centered modal card --- */
+.Project_modal__card {
+  position: relative;
+  width: min(1000px, 95vw);
+  max-height: 90vh;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  overflow: hidden; /* contain inner scroll areas */
+}
+
+@media (max-width: 900px) {
+  .Project_modal__card {
+    grid-template-columns: 1fr;
+    width: 95vw;
+    max-height: 92vh;
+  }
+}
+
+/* Close (X) button */
+.Project_modal__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2rem; height: 2rem;
+  border: none;
+  background: rgba(0,0,0,0.06);
+  border-radius: 9999px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.Project_modal__close:hover {
+  background: rgba(0,0,0,0.12);
+}
+
+/* Media area: ensure full image is visible */
+.Project_modal__media {
+  position: relative;
+  background: #000;              /* subtle letterbox background */
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 300px;
+  height: 60vh;                  /* big, but capped by max-height container */
+}
+
+/* Reuse slider in modal; fill container */
+.Project_slider--modal {
+  position: absolute;
+  inset: 0;
+}
+
+/* In modal, show full image (not cropped) */
+.Project_slider__img--contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;           /* <-- show full image */
+  display: block;
+  background: #000;              /* blend with letterbox */
+}
+
+/* Modal body (text + buttons) */
+.Project_modal__body {
+  overflow: auto;
+  padding-right: 0.25rem;
+  -webkit-overflow-scrolling: touch; /* smooth mobile scroll */
+}
+.Project_modal__title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+.Project_modal__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #111827;
+  white-space: pre-line; /* keep your intentional line breaks */
+  margin-bottom: 0.75rem;
+}
+
+.Project_buttons--modal {
+  margin-top: 0.5rem;
+}
+
+/* Keep your existing slider arrows/dots styles; they work in modal too */
+
+
 /* Large screens (>= 1024px) */
 @media only screen and (min-width: 1024px) {
   .Project_cards__items {
@@ -128,6 +337,38 @@
   .Project_cards__item {
     width: 100%; /* One card per row */
     margin-bottom: 2rem; /* Add spacing between rows */
+  }
+}
+/* Mobile: full height modal card, stacked layout, scrollable body */
+@media (max-width: 900px) {
+  .Project_modal__card {
+    grid-template-columns: 1fr;
+    width: 100vw;
+    height: 100vh;          /* fill screen */
+    max-height: 100vh;
+    border-radius: 0;       /* edge-to-edge on mobile for space */
+    padding: 0;             /* use internal padding on sections */
+  }
+
+  .Project_modal__close {
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 2;
+  }
+
+  .Project_modal__media {
+    height: 20vh;           /* give media half the screen */
+    border-radius: 0;
+  }
+
+  .Project_modal__body {
+    height: 50vh;           /* other half for text/buttons */
+    padding: 1rem 1rem 1.25rem;
+    overflow: auto;
+  }
+
+  .Project_modal__title {
+    font-size: 1.1rem;
   }
 }
 
