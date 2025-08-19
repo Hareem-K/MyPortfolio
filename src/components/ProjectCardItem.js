@@ -120,7 +120,7 @@ function ProjectCardItem({
               <div className="Project_slider">
                 <img
                   src={imageList[index]}
-                  alt={`${label} preview ${index + 1} of ${imageList.length}`}
+                  alt={`${label} slide ${index + 1} of ${imageList.length}`}
                   className="Project_slider__img"
                   loading="lazy"
                 />
@@ -214,7 +214,7 @@ function ProjectCardItem({
                 <div className="Project_slider Project_slider--modal">
                   <img
                     src={imageList[index]}
-                    alt={`${label} image ${index + 1} of ${imageList.length}`}
+                    alt={`${label} slide ${index + 1} of ${imageList.length}`}
                     className="Project_slider__img Project_slider__img--contain"
                     loading="lazy"
                   />
