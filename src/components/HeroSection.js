@@ -30,7 +30,7 @@ function HeroSection() {
       <div className="cta-content">
         <h1 className="cta_header">Hi, I’m Hareem</h1>
         <p className='cta_description'>
-          A software engineering student passionate about creating impactful applications
+          A software engineering graduate passionate about creating impactful applications
           and seamless digital experiences.
         </p>
         <div
