@@ -44,19 +44,19 @@ function ExperienceSlideshow() {
 
   const slides = [
     {
-      image: "/images/Experience/Techstart.png",
+      image: "/images/Experience/campusbuddy.png",
       description: (
         <div className="text-container">
           <div className="experience-item">
             <h2 className="role-title">
-              UI/UX - Front End Developer | Tech Start, University of Calgary
+              UI/UX Designer & Front End Developer Intern | Campus Buddy
             </h2>
-            <h4 className="date">Oct 2024 - Present</h4>
+            <h4 className="date">June 2025 - Present</h4>
             <div className="description">
               <p>
-                Design intuitive UI/UX using FigJam and develop a React.js and CSS-based event hosting platform with features like personalized 
-                QR profiles, itinerary management, and AI-driven networking tools. Streamline event management through budgeting tools, 
-                inventory tracking, and attendee check-in logs to enhance the experience for organizers and participants.
+                Designing wireframes, prototypes, and design systems in Figma while developing reusable React/TypeScript 
+                components for web and mobile platforms. Collaborating with developers and stakeholders to enhance usability, 
+                optimize performance, and ensure accessible, consistent user experiences.
               </p>
             </div>
           </div>
@@ -83,6 +83,27 @@ function ExperienceSlideshow() {
             </div>
           </div>
         ),
+    },
+
+    {
+      image: "/images/Experience/Techstart.png",
+      description: (
+        <div className="text-container">
+          <div className="experience-item">
+            <h2 className="role-title">
+              UI/UX Designer & Front End Developer | Tech Start, University of Calgary
+            </h2>
+            <h4 className="date">Oct 2024 - May 2025</h4>
+            <div className="description">
+              <p>
+                Design intuitive UI/UX using FigJam and develop a React.js and CSS-based event hosting platform with features like personalized 
+                QR profiles, itinerary management, and AI-driven networking tools. Streamline event management through budgeting tools, 
+                inventory tracking, and attendee check-in logs to enhance the experience for organizers and participants.
+              </p>
+            </div>
+          </div>
+        </div>
+      ),
     },
 
     {
