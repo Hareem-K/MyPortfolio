@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import '../../App.css';
 import Footer from '../Footer';
 import '../Contact.css';
-import { Button } from '../Button';
 import SendMessage from '../SendMessage';
 
 export default function Contact() {
@@ -51,7 +50,7 @@ export default function Contact() {
                         <div>
                             <strong>LinkedIn</strong>
                             <p>
-                                <a href="https://www.linkedin.com/in/hareemzkhan" target="_blank">
+                                <a href="https://www.linkedin.com/in/hareemzkhan" target="_blank" rel="noopener noreferrer">
                                     Connect on LinkedIn
                                 </a>
                             </p>
@@ -63,7 +62,7 @@ export default function Contact() {
                         <div>
                             <strong>GitHub</strong>
                             <p>
-                                <a href="https://github.com/Hareem-K" target="_blank">
+                                <a href="https://github.com/Hareem-K" target="_blank" rel="noopener noreferrer">
                                     View my GitHub
                                 </a>
                             </p>
@@ -75,7 +74,7 @@ export default function Contact() {
                         <div>
                             <strong>Devpost</strong>
                             <p>
-                                <a href="https://devpost.com/Hareem-K" target="_blank">
+                                <a href="https://devpost.com/Hareem-K" target="_blank" rel="noopener noreferrer">
                                     Hackathon Projects
                                 </a>
                             </p>
