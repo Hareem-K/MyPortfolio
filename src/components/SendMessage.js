@@ -59,7 +59,7 @@ export default function SendMessage() {
     return (
         <div className='form-box'>
             <h3 className='contact-message'>
-                Feel free to send me a message for any inquiries, opportunities, or collaborations.
+                Feel free to reach out using the form below.
             </h3>
 
             <form onSubmit={handleSubmit} className="contact-form">
