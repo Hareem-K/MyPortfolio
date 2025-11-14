@@ -31,11 +31,13 @@ h1 {
 }
 
   
+/* Default card size */
 .featured_cards__item {
-  width: 30rem;
-  height: 25rem;
-  margin: 1rem;
-  align-items: center;
+  flex: 1;
+  min-width: 350px;
+  max-width: 400px;
+  height: 28rem; /* slightly taller */
+  margin: 1.5rem;
 }
 
 .featured_cards__item__link {

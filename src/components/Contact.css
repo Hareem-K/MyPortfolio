@@ -1,59 +1,92 @@
-.contact-items-container {
+/* Two-column layout container */
+.contact-container {
+    max-width: 1200px;
+    margin: 2rem auto 4rem;
+    padding: 0 1.5rem;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: space-around; /* Adjust this as needed to space items */
-    margin-top: 20px; /* Adjust margin as needed */
+    gap: 3rem;
 }
 
-.contact-item {
-    width: 45%; /* Adjust width as needed */
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    margin: 10px;
-    width: 25rem;
+/* Left = form */
+.contact-left {
+    flex: 2;
 }
 
-.contact-item img {
-    max-width: 100px;
+/* Right = links */
+.contact-right {
+    flex: 1;
+    background: var(--primary);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-.contact-item h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.contact-right p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-.contact-item p {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 20px;
+.contact-right h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    color: var(--darkRed);
 }
 
-.contact-item .btn--primary {
-    margin-top: 10px;
+/* Individual contact rows */
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-/* QR Code positioning */
-.QR {
-    position: absolute;
-    right: 20px; /* Align to the right side */
-    height: auto;
-    width: 150px; /* Adjust to a suitable size */
-    margin-top: -1%;
+.contact-link:last-of-type {
+    border-bottom: none;
 }
 
-@media (max-width: 768px) {
-    .contact-item {
-        width: 100%; /* Full width on smaller screens */
+/* Contact icons */
+.contact-link img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.9;
+}
+
+.contact-link img.email-icon {
+    width: 43px;
+    height: 43px;
+}
+
+/* Titles + text */
+.contact-link strong {
+    font-size: 1.05rem;
+}
+
+.contact-link p {
+    font-size: 0.95rem;
+    margin: 0.3rem 0 0;
+}
+
+/* Link styling */
+.contact-link a {
+    color: black;
+    text-decoration: underline;
+    transition: 0.2s ease;
+}
+
+.contact-link a:hover {
+    color: var(--darkRed);
+}
+
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
     }
-}
 
-/* Mobile screens (< 768px) */
-@media only screen and (max-width: 767px) {
-    .contact {
-        font-size: 5.1rem !important;
-    }
-    .contact-item {
-        width: 100%; /* Full width on smaller screens */
+    .contact-right {
+        width: 100%;
     }
 }

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import '../../App.css';
 import Footer from '../Footer';
 import '../Contact.css';
-import { Button } from '../Button';
 import SendMessage from '../SendMessage';
 
 export default function Contact() {
@@ -25,40 +24,65 @@ export default function Contact() {
                     Send Message
                 </Button>
             </div> */}
-
-            <SendMessage />
-
-            <div className='contact-items-container'>
-                <div className='contact-item'>
-                    <img src="images/linkedin.png" alt="LinkedIn" className='contact-image' />
-                    <h1>LinkedIn</h1>
-                    <p className='contact-info'>Let's connect on LinkedIn!</p>
-                    <Button buttonStyle="btn--download" linkTo={"https://www.linkedin.com/in/hareemzkhan"} external>
-                        Let's Connect!
-                    </Button>
+            
+            <div className="contact-container">
+                <div className="contact-left">
+                    <SendMessage />
                 </div>
 
-                <div className='contact-item'>
-                    <img src="images/github.png" alt="GitHub" className='contact-image' />
-                    <h1>Github</h1>
-                    <p className='contact-info'>Don't forget to check out my GitHub profile to view all of my projects!</p>
-                    <Button buttonStyle="btn--download" linkTo={"https://github.com/Hareem-K"} external>
-                        Github
-                    </Button>
-                </div>
+                <div className="contact-right">
+                    <p>
+                        I’d love to hear from you! Feel free to reach out for opportunities, 
+                        collaborations, or general inquiries.
+                    </p>
+                    <h3>Get in Touch</h3>
 
-                <div className='contact-item'>
-                    <img src="images/devpost.svg" alt="Devpost" className='contact-image' />
-                    <h1>Devpost</h1>
-                    <p className='contact-info'>Check out my devpost profile to see my hackathons and projects!</p>
-                    <Button buttonStyle="btn--download" linkTo={"https://devpost.com/Hareem-K"} external>
-                        Devpost
-                    </Button>
-                </div>
+                    <div className="contact-link">
+                        <img src="/images/email.png" alt=""  className='email-icon'/>
+                        <div>
+                            <strong>Email</strong>
+                            <p>hareemkhan@gmail.com</p>
+                        </div>
+                    </div>
 
+                    <div className="contact-link">
+                        <img src="/images/linkedin.png" alt="" />
+                        <div>
+                            <strong>LinkedIn</strong>
+                            <p>
+                                <a href="https://www.linkedin.com/in/hareemzkhan" target="_blank" rel="noopener noreferrer">
+                                    Connect on LinkedIn
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="contact-link">
+                        <img src="/images/github.png" alt="" />
+                        <div>
+                            <strong>GitHub</strong>
+                            <p>
+                                <a href="https://github.com/Hareem-K" target="_blank" rel="noopener noreferrer">
+                                    View my GitHub
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="contact-link">
+                        <img src="/images/devpost.svg" alt="" />
+                        <div>
+                            <strong>Devpost</strong>
+                            <p>
+                                <a href="https://devpost.com/Hareem-K" target="_blank" rel="noopener noreferrer">
+                                    Hackathon Projects
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-
-            {/* <img src="images/Profile_QR.png" alt="QRCode" className='QR' /> */}
 
             <Footer />
         </>

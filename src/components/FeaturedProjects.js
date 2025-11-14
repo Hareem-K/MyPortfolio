@@ -11,10 +11,10 @@ function FeaturedProjects() {
             <div className='featured_cards__wrapper'>
                 <ul className='featured_cards__items'>
                     <FeaturedCardItem
-                    src="images/airline.jpg"
-                    text="Collaborated with a team via GitHub to design and implement a dynamic airline booking system..."
-                    label='Airline Booking System'
-                    path='https://github.com/Hareem-K/Airline-Booking-System'
+                    src="images/lalalu.png"
+                    text="A full-stack spa and laser treatment website built with React, TypeScript, and Tailwind CSS. It features a..."
+                    label='Lalalu Skin & Laser'
+                    path='https://lalaluskinlaser.com/'
                     openInNewTab={true}
                     />
                     
