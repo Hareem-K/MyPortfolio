@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import '../../App.css';
 import './ProjectDetail.css';
@@ -9,10 +9,36 @@ import { Button } from '../Button';
 export default function ProjectDetail() {
   const { projectId } = useParams();
   const project = projects.find((item) => item.slug === projectId);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  const galleryImages = project
+    ? project.images && project.images.length > 0
+      ? project.images
+      : project.src
+      ? [project.src]
+      : []
+    : [];
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    setActiveImageIndex(0);
+  }, [projectId]);
+
+  const handlePreviousImage = () => {
+    setActiveImageIndex((prevIndex) =>
+      prevIndex === 0 ? galleryImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNextImage = () => {
+    setActiveImageIndex((prevIndex) =>
+      prevIndex === galleryImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handleSelectImage = (index) => {
+    setActiveImageIndex(index);
+  };
 
   if (!project) {
     return (
@@ -41,10 +67,48 @@ export default function ProjectDetail() {
       <div className="project-detail-page">
         <div className="project-detail-main">
           <div className="project-detail-media">
-            <img
-              src={project.images && project.images.length > 0 ? project.images[0] : project.src}
-              alt={`${project.label} screenshot`}
-            />
+            <div className="project-detail-media-frame">
+              <img
+                src={galleryImages[activeImageIndex]}
+                alt={`${project.label} screenshot ${activeImageIndex + 1}`}
+              />
+
+              {galleryImages.length > 1 && (
+                <>
+                  <button
+                    type="button"
+                    className="project-detail-media-nav prev"
+                    onClick={handlePreviousImage}
+                    aria-label="Previous image"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    type="button"
+                    className="project-detail-media-nav next"
+                    onClick={handleNextImage}
+                    aria-label="Next image"
+                  >
+                    ›
+                  </button>
+                </>
+              )}
+            </div>
+
+            {galleryImages.length > 1 && (
+              <div className="project-detail-thumbnails">
+                {galleryImages.map((src, index) => (
+                  <button
+                    key={`${src}-${index}`}
+                    type="button"
+                    className={`project-detail-thumb ${index === activeImageIndex ? 'active' : ''}`}
+                    style={{ backgroundImage: `url(${src})` }}
+                    onClick={() => handleSelectImage(index)}
+                    aria-label={`Show image ${index + 1}`}
+                  />
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="project-detail-content">
