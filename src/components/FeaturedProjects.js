@@ -14,24 +14,24 @@ function FeaturedProjects() {
                     src="images/lalalu.png"
                     text="A full-stack spa and laser treatment website built with React, TypeScript, and Tailwind CSS. It features a..."
                     label='Lalalu Skin & Laser'
-                    path='https://lalaluskinlaser.com/'
-                    openInNewTab={true}
+                    path='/projects/lalalu-skin-laser'
+                    openInNewTab={false}
                     />
                     
                     <FeaturedCardItem
                     src="images/ObituaryMaker.png"
                     text="Developed an innovative obituary maker application, empowering users to create personalized tributes..."
                     label='Obituary Maker Application'
-                    path='https://github.com/Hareem-K/Obituary-Maker'
-                    openInNewTab={true}
+                    path='/projects/obituary-maker'
+                    openInNewTab={false}
                     />
 
                     <FeaturedCardItem
                     src="images/wordle.png"
                     text="Revitalized the classic game Wordle through the implementation of Vanilla JavaScript, HTML, and CSS..."
                     label='Wordle'
-                    path='https://github.com/Hareem-K/Wordle-Application'
-                    openInNewTab={true}
+                    path='/projects/wordle'
+                    openInNewTab={false}
                     />
                 </ul>
             </div>

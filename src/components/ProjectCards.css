@@ -31,21 +31,17 @@
 /* Cards Items */
 .Project_cards__items {
   margin-bottom: 24px;
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping for responsiveness */
-  justify-content: space-between; /* Even spacing between cards */
-  gap: 2rem; /* Add spacing between cards */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 /* Individual Card */
 .Project_cards__item {
   display: flex;
   flex: 1;
-  margin: 1rem; /* Add consistent spacing between cards */
+  margin: 0; /* Remove margin since grid handles spacing */
   border-radius: 40px;
-  width: calc(48% - 2rem); /* Two cards per row with spacing */
-  max-width: 650px; /* Prevent overly large cards */
-  min-width: 300px; /* Prevent cards from shrinking too much */
 }
 
 /* Card Link */
@@ -58,6 +54,12 @@
   overflow: hidden;
   background-color: var(--primary);
   text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Project_cards__item__link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 /* Card Image Wrapper */
@@ -94,16 +96,23 @@
 
 /* Card Info */
 .Project_cards__item__info {
-  padding: 10px 30px 0px;
+  padding: 20px 30px 30px;
+}
+
+.Project_cards__item__label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--black);
 }
 
 .Project_cards__item__text {
   color: var(--black);
-  background-color: var(--primary);
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 1.7;
   text-align: center;
-  font-weight: 150;
+  font-weight: 400;
+  margin: 0;
 }
 
 .Project_buttons {
@@ -326,17 +335,12 @@
   .Project_cards__items {
     gap: 2rem; /* Ensure consistent spacing */
   }
-
-  .Project_cards__item {
-    width: calc(48% - 2rem); /* Two cards per row with spacing */
-  }
 }
 
 /* Medium screens (< 1024px) */
 @media only screen and (max-width: 1024px) {
-  .Project_cards__item {
-    width: 100%; /* One card per row */
-    margin-bottom: 2rem; /* Add spacing between rows */
+  .Project_cards__items {
+    grid-template-columns: 1fr; /* One column */
   }
 }
 /* Mobile: full height modal card, stacked layout, scrollable body */
@@ -378,12 +382,7 @@
     font-size: 5rem !important;
   }
 
-  .Project_Instructions {
-    font-size: 1.25rem; /* Smaller text for instructions */
-  }
-
   .Project_cards__item {
-    width: 95%; /* Slightly wider cards on mobile */
     margin: 1rem auto; /* Center cards with spacing */
   }
 
