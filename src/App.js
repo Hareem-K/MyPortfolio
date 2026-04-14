@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/pages/Home';
 import Resume from './components/pages/Resume';
 import Projects from './components/pages/Projects';
+import ProjectDetail from './components/pages/ProjectDetail';
 import Experience from './components/pages/Experience';
 import Contact from './components/pages/Contact';
 
@@ -19,6 +20,7 @@ function App() {
           <Route path='/resume' Component={Resume} />
           <Route path='/projects' Component={Projects} />
           <Route path='/experience' Component={Experience} />
+          <Route path='/projects/:projectId' Component={ProjectDetail} />
           <Route path='/contact' Component={Contact} />
         </Routes>
       </Router>
