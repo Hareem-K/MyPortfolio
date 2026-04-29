@@ -9,6 +9,8 @@ const projects = [
     siteUrl: 'https://lalaluskinlaser.com/',
     tech: ['React', 'TypeScript', 'Tailwind', 'Node.js'],
     images: ['/images/lalalu.png', '/images/lalalu-1.png', '/images/lalalu-2.png', '/images/lalalu-3.png'],
+    categories: ['fullstack', 'frontend'],
+    featured: true,
   },
   {
     slug: 'callmentor-online-community',
@@ -20,6 +22,8 @@ const projects = [
     siteUrl: '',
     tech: ['React', 'Bootstrap', 'Nest.js', 'PostgreSQL'],
     images: ['/images/callmentor-1.png', '/images/callmentor-2.png', '/images/callmentor-3.png'],
+    categories: ['fullstack', 'backend'],
+    featured: false,
   },
   {
     slug: 'pdf-fusion',
@@ -31,17 +35,21 @@ const projects = [
     siteUrl: '',
     tech: ['React', 'Python', 'AWS', 'Bootstrap'],
     src: '/images/PDFFusion.png',
+    categories: ['fullstack', 'backend'],
+    featured: false,
   },
   {
     slug: 'habitcircle',
     label: 'HabitCircle',
     summary: 'Habit tracker built for a health hack with gamified recovery support.',
     description:
-      'HabitCircle was developed during the Alberta Health Hack as a responsive habit tracker supporting families of youth undergoing rehabilitation and mental health recovery. The app uses a gamified experience to keep users engaged, and it earned 3rd place in the hackathon with prize money donated to Alberta Children’s Hospital.',
+      'HabitCircle was developed during the Alberta Health Hack as a responsive habit tracker supporting families of youth undergoing rehabilitation and mental health recovery. The app uses a gamified experience to keep users engaged, and it earned 3rd place in the hackathon with prize money donated to Alberta Children\'s Hospital.',
     githubUrl: 'https://github.com/Hareem-K/HabitCircle_albertahealthhack',
     siteUrl: 'https://devpost.com/software/habitcycle',
     tech: ['React', 'CSS', 'Figma'],
     src: '/images/HabitCircle.jpg',
+    categories: ['frontend'],
+    featured: false,
   },
   {
     slug: 'plotponder',
@@ -53,6 +61,8 @@ const projects = [
     siteUrl: '',
     tech: ['React', 'Java', 'SQL', 'Firebase', 'OpenAI'],
     images: ['/images/PlotPonder.png', '/images/plotponder-1.png', '/images/plotponder-2.png', '/images/plotponder-3.png', '/images/plotponder-4.png', '/images/plotponder-5.png'],
+    categories: ['fullstack', 'ai'],
+    featured: true,
   },
   {
     slug: 'portfolio-website',
@@ -64,6 +74,8 @@ const projects = [
     siteUrl: 'https://hareemk.com/',
     tech: ['React', 'CSS'],
     src: '/images/project.png',
+    categories: ['frontend'],
+    featured: false,
   },
   {
     slug: 'airline-booking-system',
@@ -75,6 +87,8 @@ const projects = [
     siteUrl: '',
     tech: ['Java', 'SQL', 'GUI'],
     src: '/images/airline.jpg',
+    categories: ['backend'],
+    featured: false,
   },
   {
     slug: 'obituary-maker',
@@ -86,6 +100,8 @@ const projects = [
     siteUrl: '',
     tech: ['ChatGPT API', 'AWS', 'Cloudinary'],
     src: '/images/ObituaryMaker.png',
+    categories: ['ai', 'fullstack'],
+    featured: true,
   },
   {
     slug: 'wildlife-rescue-schedule-builder',
@@ -97,6 +113,8 @@ const projects = [
     siteUrl: '',
     tech: ['Java', 'SQL', 'GUI'],
     src: '/images/fox.jpg',
+    categories: ['backend'],
+    featured: false,
   },
   {
     slug: 'notes-application',
@@ -108,6 +126,8 @@ const projects = [
     siteUrl: 'https://main--zesty-marshmallow-7f256c.netlify.app/',
     tech: ['React', 'Google Auth', 'AWS', 'Terraform'],
     src: '/images/notes.png',
+    categories: ['fullstack', 'backend'],
+    featured: false,
   },
   {
     slug: 'wordle',
@@ -119,6 +139,8 @@ const projects = [
     siteUrl: 'https://wordleapplication.netlify.app/',
     tech: ['HTML', 'CSS', 'JavaScript'],
     images: ['/images/wordle.png', '/images/wordle-1.png'],
+    categories: ['frontend'],
+    featured: false,
   },
   {
     slug: 'art-museum-application',
@@ -130,6 +152,8 @@ const projects = [
     siteUrl: '',
     tech: ['SQL', 'Java', 'Database'],
     src: '/images/artmuseum.jpg',
+    categories: ['backend'],
+    featured: false,
   },
   {
     slug: 'data-structures-library',
@@ -141,6 +165,8 @@ const projects = [
     siteUrl: '',
     tech: ['Java', 'Data Structures'],
     src: '/images/datastructures.jpg',
+    categories: ['backend'],
+    featured: false,
   },
   {
     slug: 'threatened-species-info',
@@ -152,6 +178,8 @@ const projects = [
     siteUrl: '',
     tech: ['Python', 'Matplotlib', 'CSV'],
     src: '/images/threatened.png',
+    categories: ['backend', 'data'],
+    featured: false,
   },
 ];
 

@@ -1,0 +1,206 @@
+/* ── Hero shell ──────────────────────────────────────────── */
+.projects-hero {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* ── Background + animated blobs ─────────────────────────── */
+.projects-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-color: var(--primaryOG);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Soft overlay so text is always legible */
+.projects-hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(210, 198, 185, 0.55) 0%,
+    rgba(210, 198, 185, 0.1) 60%,
+    transparent 100%
+  );
+}
+
+.projects-hero__wave {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.22;
+}
+
+.projects-hero__wave--1 {
+  width: 600px;
+  height: 600px;
+  background: #b9a98f;
+  top: -200px;
+  right: -80px;
+  animation: heroWaveDrift 12s ease-in-out infinite;
+}
+
+.projects-hero__wave--2 {
+  width: 400px;
+  height: 400px;
+  background: #a8977e;
+  bottom: -150px;
+  left: 60px;
+  animation: heroWaveDrift 9s ease-in-out infinite reverse;
+}
+
+.projects-hero__wave--3 {
+  width: 300px;
+  height: 300px;
+  background: #cec0ac;
+  top: 80px;
+  left: 32%;
+  animation: heroWaveDrift 14s ease-in-out infinite 2s;
+}
+
+@keyframes heroWaveDrift {
+  0%,  100% { transform: translate(0,    0)    rotate(0deg);  }
+  33%        { transform: translate(20px, -15px) rotate(3deg);  }
+  66%        { transform: translate(-12px, 10px) rotate(-2deg); }
+}
+
+/* ── Main text block (bottom-left) ───────────────────────── */
+.projects-hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 3.5rem 3rem;
+}
+
+.projects-hero__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3.2rem, 7vw, 5.5rem);
+  font-weight: 400;
+  color: #1a1714;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+
+  opacity: 0;
+  animation: heroFadeUp 0.7s ease 0.15s both;
+}
+
+.projects-hero__title em {
+  font-style: italic;
+  color: #5a4f44;
+}
+
+.projects-hero__sub {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #4a413a;
+  max-width: 400px;
+  line-height: 1.65;
+  margin: 0;
+
+  opacity: 0;
+  animation: heroFadeUp 0.7s ease 0.32s both;
+}
+
+/* ── Stat row (bottom-right) ─────────────────────────────── */
+.projects-hero__stats {
+  position: absolute;
+  bottom: 2.75rem;
+  right: 3.5rem;
+  z-index: 2;
+  display: flex;
+  gap: 2rem;
+
+  opacity: 0;
+  animation: heroFadeUp 0.7s ease 0.48s both;
+}
+
+.projects-hero__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.projects-hero__stat-num {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #1a1714;
+  line-height: 1;
+}
+
+.projects-hero__stat-label {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7a6e62;
+  margin-top: 3px;
+}
+
+/* ── Bottom rule ─────────────────────────────────────────── */
+.projects-hero__rule {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(90, 79, 68, 0.18);
+  z-index: 2;
+}
+
+/* ── Entrance animation ──────────────────────────────────── */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .projects-hero {
+    min-height: 340px;
+  }
+
+  .projects-hero__content {
+    padding: 0 1.5rem 2.5rem;
+  }
+
+  .projects-hero__sub {
+    font-size: 0.88rem;
+    max-width: 280px;
+  }
+
+  .projects-hero__stats {
+    right: 1.5rem;
+    bottom: 2.25rem;
+    gap: 1.25rem;
+  }
+
+  .projects-hero__stat-num {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-hero {
+    min-height: 300px;
+  }
+
+  .projects-hero__content {
+    padding: 0 1.25rem 5rem;
+  }
+
+  .projects-hero__stats {
+    bottom: 1.5rem;
+    right: 1.25rem;
+  }
+
+  .projects-hero__sub {
+    display: none;
+  }
+}
