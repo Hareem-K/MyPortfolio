@@ -1,96 +1,249 @@
-/* Two-column layout container */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+/* ── Page header ── */
+.contact {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.18em !important;
+  font-size: 7rem !important;
+  color: var(--darkRed) !important;
+}
+
+/* ── Full-bleed hero strip ── */
+.contact-hero {
+  width: 100%;
+  background: linear-gradient(135deg, #111111 0%, #2a1f14 45%, #b9a082 100%);
+  padding: 5rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(185, 160, 130, 0.18) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.contact-hero__eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--primary);
+  opacity: 0.8;
+  position: relative;
+}
+
+.contact-hero__headline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--white);
+  text-align: center;
+  line-height: 1.15;
+  max-width: 680px;
+  margin: 0;
+  position: relative;
+}
+
+.contact-hero__headline em {
+  font-style: normal;
+  color: var(--primaryOG);
+}
+
+.contact-hero__sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--primary);
+  opacity: 0.7;
+  text-align: center;
+  max-width: 480px;
+  line-height: 1.7;
+  margin-top: 0.5rem;
+}
+
+/* ── Main two-col layout ── */
 .contact-container {
-    max-width: 1200px;
-    margin: 2rem auto 4rem;
-    padding: 0 1.5rem;
-    display: flex;
-    gap: 3rem;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 5rem 2rem 6rem;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  align-items: start;
 }
 
-/* Left = form */
-.contact-left {
-    flex: 2;
-}
-
-/* Right = links */
+/* ── Right: info panel ── */
 .contact-right {
-    flex: 1;
-    background: var(--primary);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
-.contact-right p {
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-    line-height: 1.5;
+.contact-right__intro {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
 }
 
-.contact-right h3 {
-    margin-bottom: 1.5rem;
-    font-size: 1.4rem;
-    color: var(--darkRed);
+.contact-right__title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--darkRed);
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.02em;
 }
 
-/* Individual contact rows */
+/* ── Individual contact rows ── */
 .contact-link {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  cursor: default;
 }
 
 .contact-link:last-of-type {
-    border-bottom: none;
+  border-bottom: none;
 }
 
-/* Contact icons */
-.contact-link img {
-    width: 40px;
-    height: 40px;
-    opacity: 0.9;
+.contact-link:hover {
+  transform: translateX(4px);
 }
 
-.contact-link img.email-icon {
-    width: 43px;
-    height: 43px;
+/* Icon circle */
+.contact-link__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
 }
 
-/* Titles + text */
-.contact-link strong {
-    font-size: 1.05rem;
+.contact-link:hover .contact-link__icon {
+  background: var(--darkRed);
 }
 
-.contact-link p {
-    font-size: 0.95rem;
-    margin: 0.3rem 0 0;
+.contact-link__icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  transition: filter 0.2s ease;
 }
 
-/* Link styling */
-.contact-link a {
-    color: black;
-    text-decoration: underline;
-    transition: 0.2s ease;
+.contact-link:hover .contact-link__icon img {
+  filter: invert(1);
 }
 
-.contact-link a:hover {
-    color: var(--darkRed);
+.contact-link__body strong {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 0.2rem;
 }
 
+.contact-link__body p {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--darkRed);
+}
 
-/* Mobile responsive */
+.contact-link__body a {
+  color: var(--darkRed);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.contact-link__body a:hover {
+  border-bottom-color: var(--darkRed);
+}
+
+/* ── Availability chip ── */
+.contact-available {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+  background: #f0f5ee;
+  border: 1px solid #c6dbbf;
+  border-radius: 100px;
+  padding: 0.45rem 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #3a6b31;
+  width: fit-content;
+}
+
+.contact-available__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #52a645;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ── Mobile ── */
 @media (max-width: 900px) {
-    .contact-container {
-        flex-direction: column;
-    }
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem 1.5rem 4rem;
+  }
 
-    .contact {
-        font-size: 5.1rem !important;
-    }
+  .contact-right {
+    position: static;
+  }
 
-    .contact-right {
-        width: 100%;
-    }
+  .contact {
+    font-size: 4.5rem !important;
+  }
+
+  .contact-hero {
+    padding: 3.5rem 1.5rem 3rem;
+  }
+
+  .contact-hero__headline {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    font-size: 3.5rem !important;
+  }
 }

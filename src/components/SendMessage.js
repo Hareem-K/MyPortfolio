@@ -41,13 +41,7 @@ export default function SendMessage() {
         )
         .then(() => {
             alert('Message sent successfully!');
-            setFormData({
-                name: '',
-                email: '',
-                subject: '',
-                phone: '',
-                message: ''
-            });
+            setFormData({ name: '', email: '', subject: '', phone: '', message: '' });
         })
         .catch((error) => {
             console.error('EmailJS Error:', error);
@@ -58,68 +52,84 @@ export default function SendMessage() {
 
     return (
         <div className='form-box'>
-            <h3 className='contact-message'>
-                Feel free to reach out using the form below.
-            </h3>
+            <h3 className='contact-message'>Send me a message</h3>
+            <hr className="form-divider" />
 
             <form onSubmit={handleSubmit} className="contact-form">
 
-                <div className='form-group'>
-                    <input
-                        className='form-control'
-                        type='text'
-                        name='name'
-                        placeholder='Name *'
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                    />
+                {/* Row 1: Name + Email */}
+                <div className="form-row">
+                    <div className="form-field">
+                        <input
+                            className='form-control'
+                            type='text'
+                            name='name'
+                            id='name'
+                            placeholder='Name'
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                        />
+                        <label htmlFor="name">Name *</label>
+                    </div>
+
+                    <div className="form-field">
+                        <input
+                            className='form-control'
+                            type='email'
+                            name='email'
+                            id='email'
+                            placeholder='Email'
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                        <label htmlFor="email">Email *</label>
+                    </div>
                 </div>
 
-                <div className='form-group'>
-                    <input
-                        className='form-control'
-                        type='email'
-                        name='email'
-                        placeholder='Email *'
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
+                {/* Row 2: Subject + Phone */}
+                <div className="form-row">
+                    <div className="form-field">
+                        <input
+                            className='form-control'
+                            type='text'
+                            name='subject'
+                            id='subject'
+                            placeholder='Subject'
+                            value={formData.subject}
+                            onChange={handleChange}
+                            required
+                        />
+                        <label htmlFor="subject">Subject *</label>
+                    </div>
+
+                    <div className="form-field">
+                        <input
+                            className='form-control'
+                            type='text'
+                            name='phone'
+                            id='phone'
+                            placeholder='Phone'
+                            value={formData.phone}
+                            onChange={handleChange}
+                        />
+                        <label htmlFor="phone">Phone (optional)</label>
+                    </div>
                 </div>
 
-                <div className='form-group'>
-                    <input
-                        className='form-control'
-                        type='text'
-                        name='subject'
-                        placeholder='Subject *'
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-
-                <div className='form-group'>
-                    <input
-                        className='form-control'
-                        type='text'
-                        name='phone'
-                        placeholder='Phone (optional)'
-                        value={formData.phone}
-                        onChange={handleChange}
-                    />
-                </div>
-
-                <div className='form-group'>
+                {/* Message */}
+                <div className="form-field">
                     <textarea
                         className='form-control textarea'
                         name='message'
-                        placeholder='Your Message *'
+                        id='message'
+                        placeholder='Message'
                         value={formData.message}
                         onChange={handleChange}
                         required
-                    ></textarea>
+                    />
+                    <label htmlFor="message">Your message *</label>
                 </div>
 
                 <button
@@ -127,7 +137,7 @@ export default function SendMessage() {
                     disabled={loading}
                     className="send-btn"
                 >
-                    {loading ? 'Sending...' : 'Send Message'}
+                    {loading ? 'Sending…' : 'Send Message →'}
                 </button>
             </form>
         </div>

@@ -1,69 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+/* ── Form wrapper ── */
 .form-box {
-    width: 100%;
-    padding: 2.5rem;
-    border-radius: 10px;
-    background: var(--primary);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .contact-message {
-    text-align: center;
-    color: var(--darkRed);
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    padding: 0 1rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.65rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--darkRed);
+  text-align: left;
+  margin-bottom: 2rem;
 }
 
+/* ── Form layout ── */
 .contact-form {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .form-group {
-    margin-bottom: 1.2rem;
+  margin-bottom: 0;
+  position: relative;
+}
+
+/* ── Floating-label inputs ── */
+.form-field {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-field label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #aaa;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  background: transparent;
+  padding: 0 2px;
+}
+
+.form-field input:focus ~ label,
+.form-field input:not(:placeholder-shown) ~ label,
+.form-field textarea:focus ~ label,
+.form-field textarea:not(:placeholder-shown) ~ label {
+  top: -0.55rem;
+  left: 0.75rem;
+  font-size: 0.72rem;
+  color: var(--darkRed);
+  background: var(--white);
+  padding: 0 4px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .form-control {
-    width: 100%;
-    padding: 0.9rem 1rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    outline: none;
+  width: 100%;
+  padding: 1rem 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--darkRed);
+  background: var(--white);
+  border: 1.5px solid #e0dbd4;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+}
+
+.form-control::placeholder {
+  color: transparent;
 }
 
 .form-control:focus {
-    border-color: black;
+  border-color: var(--darkRed);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-control:hover:not(:focus) {
+  border-color: #c5bfb8;
 }
 
 .textarea {
-    min-height: 130px;
-    resize: vertical;
+  min-height: 140px;
+  resize: vertical;
+  line-height: 1.6;
+  padding-top: 1rem;
 }
 
+/* ── Submit button ── */
 .send-btn {
-    width: 100%;
-    padding: 0.9rem;
-    background: black;
-    color: white;
-    border: 1px solid black;
-    border-radius: 25px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: 0.3s ease;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  background: var(--darkRed);
+  color: var(--white);
+  border: 2px solid var(--darkRed);
+  border-radius: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.send-btn:hover {
-    background: white;
-    color: black;
+.send-btn:hover:not(:disabled) {
+  background: transparent;
+  color: var(--darkRed);
+  transform: translateY(-1px);
 }
 
-@media (max-width: 768px) {
-    .form-box {
-        padding: 1.8rem;
-    }
+.send-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
 
-    .contact-message {
-        font-size: 1.1rem;
-        margin-bottom: 1.6rem;
-    }
+.send-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ── Divider line ── */
+.form-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--primary);
+  margin-bottom: 1.75rem;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-message {
+    font-size: 1.35rem;
+  }
 }

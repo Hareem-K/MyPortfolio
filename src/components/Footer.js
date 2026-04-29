@@ -32,7 +32,7 @@ function Footer() {
                     HK <i className='fab fa-typo3'></i>
                 </Link>
             </div>
-            <small className='website-rights'>HK © 2024</small>
+            <small className='website-rights'>HK © 2026</small>
             <div className='social-icons'>
             <Link
               className='social-icon-link mail'
