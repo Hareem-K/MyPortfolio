@@ -1,0 +1,50 @@
+.ticker-wrapper {
+  width: 100%;
+  background-color: var(--primary);       /* your brand tan #b9a082 */
+  overflow: hidden;
+  padding: 14px 0;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.ticker-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker-scroll 32s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #4a3218;
+  padding: 0 4px;
+}
+
+.ticker-dot {
+  margin: 0 18px;
+  opacity: 0.45;
+  font-size: 1rem;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause on reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+  }
+  .ticker-wrapper {
+    overflow-x: auto;
+  }
+}

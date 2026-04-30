@@ -17,6 +17,26 @@ function AwardsSlideshow() {
 
   const awards = [
     {
+      image: "/images/Experience/Schulich.png",
+      title: "Global Experience in Software Engineering | University of Calgary (Cambridge, UK)",
+      date: "Feb 2025",
+      details: [
+        "Participated in a global software engineering experience hosted at Cambridge, UK, through the University of Calgary. Engaged in an intensive international academic environment focused on software engineering principles, collaborative project work, and cross-cultural professional development."
+      ]
+    },
+    {
+      image: "/images/HabitCircle.jpg",
+      title: "Alberta Health Hackathon 3rd Place Winner | Arcurve & ACHF",
+      date: "Jul 2024",
+      details: [
+        "Earned 3rd place at the Alberta Health Hackathon, sponsored by Arcurve and the Alberta Children's Hospital Foundation (ACHF). Developed HabitCircle, a gamified habit-tracking app designed to support youth undergoing rehabilitation and mental health recovery. Prize money was donated to Alberta Children's Hospital."
+      ],
+      button: {
+        text: "View Project",
+        link: "https://devpost.com/software/habitcycle"
+      }
+    },
+    {
       image: "/images/Experience/AIFundamentals.png",
       title: "Artificial Intelligence Fundamentals | IBM SkillsBuild",
       date: "Sept 2024",
@@ -65,7 +85,7 @@ function AwardsSlideshow() {
       ],
       button: {
         text: "View Credential",
-        link: "https://badges.ucalgary.ca/achievements/1786d1d78fac536b666e05d58dadbd00"
+        link: "https://badges.ucalgary.ca/1786d1d78fac536b666e05d58dadbd00"
       }
     },
     {
@@ -81,7 +101,7 @@ function AwardsSlideshow() {
       title: "Recognition Award | Glenbow Construction Company",
       date: "Sept 2021",
       details: [
-        "Received a recognition award from Glenbow Construction Company in acknowledgement of “high performance, versatility, adaptability and multitasking”"
+        "Received a recognition award from Glenbow Construction Company in acknowledgement of high performance, versatility, adaptability and multitasking"
       ]
     }
   ];
@@ -99,28 +119,28 @@ function AwardsSlideshow() {
               />
             )}
             <div className="slide-description">
-                <div className="text-container">
-                    <h2 className="role-title">{award.title}</h2>
-                    <div className="awardDate">{award.date}</div>
-                    <div className="description">
-                    {award.details.map((detail, idx) => (
-                        <p key={idx}>{detail}</p>
-                    ))}
-                    </div>
-                    {award.button && (
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
-                        <Button
-                        className='btns'
-                        buttonStyle='btn--download'
-                        buttonSize='btn--large'
-                        linkTo={award.button.link}
-                        external
-                        >
-                        {award.button.text} <i className='fas fa-arrow-right' />
-                        </Button>
-                    </div>
-                    )}
+              <div className="text-container">
+                <h2 className="role-title">{award.title}</h2>
+                <div className="awardDate">{award.date}</div>
+                <div className="description">
+                  {award.details.map((detail, idx) => (
+                    <p key={idx}>{detail}</p>
+                  ))}
                 </div>
+                {award.button && (
+                  <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                    <Button
+                      className='btns'
+                      buttonStyle='btn--download'
+                      buttonSize='btn--large'
+                      linkTo={award.button.link}
+                      external
+                    >
+                      {award.button.text} <i className='fas fa-arrow-right' />
+                    </Button>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         ))}

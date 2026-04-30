@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function ExperienceSlideshow() {
-  const [activeRole, setActiveRole] = useState(0); // Track active Prep101 role
+  const [activeRole, setActiveRole] = useState(0);
 
   const prep101Roles = [
     {
@@ -28,7 +28,6 @@ function ExperienceSlideshow() {
       date: "Aug 2022 – Jan 2023",
       details: [
         "Promoted upcoming prep sessions through Facebook, Discord, and Instagram by maintaining accurate and concise session information on all platforms, while consistently communicating updates to students, managers, and higher-ups to ensure alignment and address feedback effectively.",
-
       ],
     },
   ];
@@ -44,6 +43,25 @@ function ExperienceSlideshow() {
 
   const slides = [
     {
+      image: "/images/Experience/uofc.png",
+      description: (
+        <div className="text-container">
+          <div className="experience-item">
+            <h2 className="role-title">
+              Client Services Analyst | University of Calgary, Web Services
+            </h2>
+            <h4 className="date">Oct 2024 - Present</h4>
+            <div className="description">
+              <p>Address client-reported issues efficiently by triaging ServiceNow tickets and collaborating with development
+                teams using Jira for bug fixes and feature requests. Enhance system usability through quality assurance
+                testing, user documentation, and support for high-priority strategic initiatives.
+              </p>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
       image: "/images/Experience/campusbuddy.png",
       description: (
         <div className="text-container">
@@ -51,38 +69,17 @@ function ExperienceSlideshow() {
             <h2 className="role-title">
               UI/UX Designer & Front End Developer Intern | Campus Buddy
             </h2>
-            <h4 className="date">June 2025 - Present</h4>
+            <h4 className="date">June 2025 - Jan 2026</h4>
             <div className="description">
               <p>
-                Designing wireframes, prototypes, and design systems in Figma while developing reusable React/TypeScript 
-                components for web and mobile platforms. Collaborating with developers and stakeholders to enhance usability, 
+                Designing wireframes, prototypes, and design systems in Figma while developing reusable React/TypeScript
+                components for web and mobile platforms. Collaborating with developers and stakeholders to enhance usability,
                 optimize performance, and ensure accessible, consistent user experiences.
               </p>
             </div>
           </div>
         </div>
       ),
-    },
-
-    {
-        image: "/images/Experience/uofc.png",
-        description: (
-          <div className="text-container">
-            <div className="experience-item">
-              <h2 className="role-title">
-                Client Services Analyst | University of Calgary, Web Services
-              </h2>
-              <h4 className="date">Oct 2024 - Present</h4>
-  
-              <div className="description">
-                <p>Address client-reported issues efficiently by triaging ServiceNow tickets and collaborating with development 
-                    teams using Jira for bug fixes and feature requests. Enhance system usability through quality assurance 
-                    testing, user documentation, and support for high-priority strategic initiatives.
-                </p>
-              </div>
-            </div>
-          </div>
-        ),
     },
 
     {
@@ -96,8 +93,8 @@ function ExperienceSlideshow() {
             <h4 className="date">Oct 2024 - May 2025</h4>
             <div className="description">
               <p>
-                Design intuitive UI/UX using FigJam and develop a React.js and CSS-based event hosting platform with features like personalized 
-                QR profiles, itinerary management, and AI-driven networking tools. Streamline event management through budgeting tools, 
+                Design intuitive UI/UX using FigJam and develop a React.js and CSS-based event hosting platform with features like personalized
+                QR profiles, itinerary management, and AI-driven networking tools. Streamline event management through budgeting tools,
                 inventory tracking, and attendee check-in logs to enhance the experience for organizers and participants.
               </p>
             </div>
@@ -147,12 +144,12 @@ function ExperienceSlideshow() {
             </h2>
             <h4 className="date">Nov 2023 - July 2024</h4>
             <div className="description">
-                <p>
-                Enhanced user experience by updating and refining web content to ensure accuracy, aesthetic appeal, and the successful creation of over 700 pages. 
-                Streamlined project management and progress tracking through an organized system and updated master Excel list, working seamlessly within a scrum 
-                methodology. Conducted thorough testing and quality assurance to deliver flawless functionality and a seamless user experience across revamped web 
+              <p>
+                Enhanced user experience by updating and refining web content to ensure accuracy, aesthetic appeal, and the successful creation of over 700 pages.
+                Streamlined project management and progress tracking through an organized system and updated master Excel list, working seamlessly within a scrum
+                methodology. Conducted thorough testing and quality assurance to deliver flawless functionality and a seamless user experience across revamped web
                 pages.
-                </p>
+              </p>
             </div>
           </div>
         </div>
@@ -169,11 +166,10 @@ function ExperienceSlideshow() {
             <h4 className="date">Jan 2021 – Aug 2023</h4>
             <div className="description">
               <p>
-              Provided administrative support by coordinating with clients, construction workers, and suppliers, while managing the company’s expense account to
-               ensure accurate records and timely payments. Promoted the company and secured new projects through a personable telemarketing and social media 
-               presence, effectively liaising with suppliers to obtain quotes, ensure timely deliveries, and maintain project schedules.
+                Provided administrative support by coordinating with clients, construction workers, and suppliers, while managing the company's expense account to
+                ensure accurate records and timely payments. Promoted the company and secured new projects through a personable telemarketing and social media
+                presence, effectively liaising with suppliers to obtain quotes, ensure timely deliveries, and maintain project schedules.
               </p>
-
             </div>
           </div>
         </div>

@@ -76,6 +76,11 @@
 }
 
 @media screen and (max-width: 960px) {
+  .navbar-container {
+    width: 100%;
+    position: relative; /* so menu-icon absolute positioning is relative to this */
+  }
+
   .navbar {
     position: sticky;
   }
@@ -120,7 +125,7 @@
     display: block;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 1rem;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;

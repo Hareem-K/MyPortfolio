@@ -43,7 +43,11 @@ export default function Contact() {
                         </div>
                         <div className="contact-link__body">
                             <strong>Email</strong>
-                            <p>hareemkhan@gmail.com</p>
+                            <p>
+                                <a href="mailto:hareemkhan@gmail.com" target="_blank" rel="noopener noreferrer">
+                                    hareemkhan@gmail.com
+                                </a>
+                            </p>
                         </div>
                     </div>
 

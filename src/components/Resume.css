@@ -341,14 +341,43 @@
   }
 }
 
+
+
 @media (max-width: 600px) {
+  .resume-hero__name {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+    word-break: break-word;
+  }
+
   .resume-hero {
     padding: 4rem 1.25rem 2.5rem;
+    overflow: hidden; /* add this */
+  }
+
+  .resume-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .resume-layout {
+    width: 100%;
+    max-width: 100%;
+    margin: 2rem 0;
+    padding: 0 0rem;
+    box-sizing: border-box;
   }
 
   .resume-stats__item {
-    min-width: 100px;
+    min-width: unset;
     padding: 1.2rem 0.5rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Remove bottom border from last row */
+  .resume-stats__item:nth-child(3),
+  .resume-stats__item:nth-child(4) {
+    border-bottom: none;
   }
 
   .resume-stats__value {
@@ -359,4 +388,12 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .resume-hero,
+  .resume-stats,
+  .resume-layout {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
 }

@@ -1,0 +1,279 @@
+/* ─────────────────────────────────────────
+   WorkTimeline.css
+   Palette: --primary (#b9a082 beige), --white, --black, --darkRed
+───────────────────────────────────────── */
+
+.wt-container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+/* ── Timeline track ── */
+.wt-timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.wt-timeline__line {
+  position: absolute;
+  left: 7px;
+  top: 12px;
+  bottom: 12px;
+  width: 1.5px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* ── Individual item row ── */
+.wt-item {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.wt-item:last-child {
+  margin-bottom: 0;
+}
+
+/* dot */
+.wt-item__dot-wrap {
+  position: absolute;
+  left: -32px;
+  top: 20px;
+  width: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.wt-item__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1.5px solid rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+  transition: border-color 0.2s ease;
+}
+
+.wt-item__dot--active {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/* ── Card ── */
+.wt-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wt-card:hover {
+  border-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+/* ── Card top row ── */
+.wt-card__top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Logo */
+.wt-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f5f0eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wt-logo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wt-logo--initials {
+  background: var(--primary);
+}
+
+.wt-logo__text {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.03em;
+}
+
+/* Meta text */
+.wt-card__meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.wt-card__role {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0 0 2px;
+  line-height: 1.3;
+}
+
+.wt-card__org {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Date */
+.wt-card__date-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.wt-card__date {
+  font-size: 0.8rem;
+  color: #777;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Current badge */
+.wt-badge--current {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 999px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+/* ── Divider ── */
+.wt-card__divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  margin: 0.85rem 0;
+}
+
+/* ── Description ── */
+.wt-card__desc {
+  font-size: 0.88rem;
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Tags ── */
+.wt-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 0.75rem;
+}
+
+.wt-tag {
+  font-size: 0.75rem;
+  background: #f5f0eb;
+  color: #5a4a3a;
+  border-radius: 999px;
+  padding: 3px 10px;
+  border: 1px solid rgba(185, 160, 130, 0.35);
+}
+
+/* ── Multi-role pills ── */
+.wt-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0.75rem 0 0;
+}
+
+.wt-pill {
+  font-size: 0.78rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: transparent;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.wt-pill:hover {
+  border-color: var(--primary);
+  color: var(--black);
+}
+
+.wt-pill--active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+
+/* Sub-role title + date (for Prep101) */
+.wt-card__sub-role {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0 0 2px;
+}
+
+.wt-card__sub-date {
+  font-size: 0.8rem;
+  color: #777;
+  margin: 0 0 0.5rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+  .wt-timeline {
+    padding-left: 24px;
+  }
+
+  .wt-timeline__line {
+    left: 5px;
+  }
+
+  .wt-item__dot-wrap {
+    left: -24px;
+  }
+
+  .wt-card__top {
+    flex-wrap: wrap;
+  }
+
+  .wt-card__date-wrap {
+    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 4px;
+    padding-left: 50px;
+  }
+
+  .wt-card__date {
+    white-space: normal;
+  }
+
+  .wt-pills {
+    gap: 5px;
+  }
+
+  .wt-pill {
+    font-size: 0.72rem;
+    padding: 3px 10px;
+  }
+}

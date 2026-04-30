@@ -1,23 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from './Button';
 import '../App.css';
 import './HeroSection.css';
 
 function HeroSection() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleScroll = () => {
-    const element = document.getElementById('more-info'); // Target the MoreInfo section by ID
+    const element = document.getElementById('more-info');
     if (element) {
-      const offset = -50; // Adjust this value to control the scroll offset
+      const offset = -50;
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition + offset;
-  
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     }
   };
-  
 
   return (
     <div className="hero-container">
@@ -27,38 +29,29 @@ function HeroSection() {
         Your browser does not support the video tag.
       </video>
 
-      <div className="cta-content">
-        <h1 className="cta_header">Hi, I’m Hareem</h1>
-        <p className='cta_description'>
+      <div className={`cta-content ${loaded ? 'cta-loaded' : ''}`}>
+        <p className="cta_eyebrow">Software Engineer · UI/UX Designer</p>
+        <h1 className="cta_header">Hi, I'm Hareem</h1>
+        <p className="cta_description">
           A software engineering graduate passionate about creating impactful applications
           and seamless digital experiences.
         </p>
-        <div
-          className="downloadButton"
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            paddingBottom: '50px',
-            paddingTop: '30px',
-          }}
-        >
+        <div className="cta_button_wrap">
           <Button
-            className="btns white-button"
+            className="btns"
             buttonStyle="btn--download"
             buttonSize="btn--large"
             onClick={handleScroll}
-            style={{ width: '250px' }}
           >
-            Check Me Out <i className="fas fa-arrow-right"></i>
+            View My Work <i className="fas fa-arrow-down"></i>
           </Button>
         </div>
       </div>
 
-      {/* <img
-        className="image"
-        src="https://i.postimg.cc/SNJFPCpS/photo.png"
-        alt="Hareem Khan"
-      /> */}
+      <div className="hero-scroll-hint">
+        <span className="scroll-line"></span>
+        <span className="scroll-text">scroll</span>
+      </div>
     </div>
   );
 }
