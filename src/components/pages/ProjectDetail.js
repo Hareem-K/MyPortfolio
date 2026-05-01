@@ -25,14 +25,14 @@ export default function ProjectDetail() {
   }, [projectId]);
 
   const handlePreviousImage = () => {
-    setActiveImageIndex((prevIndex) =>
-      prevIndex === 0 ? galleryImages.length - 1 : prevIndex - 1
+    setActiveImageIndex((prev) =>
+      prev === 0 ? galleryImages.length - 1 : prev - 1
     );
   };
 
   const handleNextImage = () => {
-    setActiveImageIndex((prevIndex) =>
-      prevIndex === galleryImages.length - 1 ? 0 : prevIndex + 1
+    setActiveImageIndex((prev) =>
+      prev === galleryImages.length - 1 ? 0 : prev + 1
     );
   };
 
@@ -43,12 +43,10 @@ export default function ProjectDetail() {
   if (!project) {
     return (
       <>
-        <div className="project-detail-not-found">
+        <div className="pd-not-found">
           <h1>Project not found</h1>
           <p>Return to the project list and choose a different item.</p>
-          <Link to="/projects" className="project-detail-back-link">
-            Back to Projects
-          </Link>
+          <Link to="/projects" className="pd-back-link">← Back to Projects</Link>
         </div>
         <Footer />
       </>
@@ -57,88 +55,152 @@ export default function ProjectDetail() {
 
   return (
     <>
-      <div className="project-detail-hero">
-        <div className="project-detail-hero-content">
-          <h1>{project.label}</h1>
-          <p>{project.summary}</p>
+      {/* ── HERO ── */}
+      <div className="pd-hero">
+        <div className="pd-hero-inner">
+          <Link to="/projects" className="pd-back-link">← All projects</Link>
+
+          <span className="pd-eyebrow">Project</span>
+          <h1 className="pd-hero-title">{project.label}</h1>
+          <p className="pd-hero-summary">{project.summary}</p>
+
+          {project.tech && project.tech.length > 0 && (
+            <div className="pd-tags">
+              {project.tech.map((t) => (
+                <span key={t} className="pd-tag">{t}</span>
+              ))}
+            </div>
+          )}
+
+          <div className="pd-hero-actions">
+            {project.siteUrl && (
+              <Button buttonStyle="btn--credential" buttonSize="btn--large" linkTo={project.siteUrl} external>
+                View live site
+              </Button>
+            )}
+            {project.githubUrl && (
+              <Button buttonStyle="btn--outline" buttonSize="btn--large" linkTo={project.githubUrl} external>
+                GitHub
+              </Button>
+            )}
+          </div>
+        </div>
+
+        {/* ── IMAGE GALLERY ── */}
+        <div className="pd-gallery">
+          <div className="pd-gallery-main">
+            <img
+              src={galleryImages[activeImageIndex]}
+              alt={`${project.label} screenshot ${activeImageIndex + 1}`}
+              className="pd-gallery-img"
+            />
+            {galleryImages.length > 1 && (
+              <>
+                <button
+                  type="button"
+                  className="pd-gallery-nav pd-gallery-nav--prev"
+                  onClick={handlePreviousImage}
+                  aria-label="Previous image"
+                >
+                  ‹
+                </button>
+                <button
+                  type="button"
+                  className="pd-gallery-nav pd-gallery-nav--next"
+                  onClick={handleNextImage}
+                  aria-label="Next image"
+                >
+                  ›
+                </button>
+                <div className="pd-gallery-counter">
+                  {activeImageIndex + 1} / {galleryImages.length}
+                </div>
+              </>
+            )}
+          </div>
+
+          {galleryImages.length > 1 && (
+            <div className="pd-thumbs">
+              {galleryImages.map((src, index) => (
+                <button
+                  key={`${src}-${index}`}
+                  type="button"
+                  className={`pd-thumb ${index === activeImageIndex ? 'pd-thumb--active' : ''}`}
+                  style={{ backgroundImage: `url(${src})` }}
+                  onClick={() => handleSelectImage(index)}
+                  aria-label={`Show image ${index + 1}`}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
-      <div className="project-detail-page">
-        <div className="project-detail-main">
-          <div className="project-detail-media">
-            <div className="project-detail-media-frame">
-              <img
-                src={galleryImages[activeImageIndex]}
-                alt={`${project.label} screenshot ${activeImageIndex + 1}`}
-              />
+      {/* ── CASE STUDY BODY ── */}
+      <div className="pd-body">
 
-              {galleryImages.length > 1 && (
-                <>
-                  <button
-                    type="button"
-                    className="project-detail-media-nav prev"
-                    onClick={handlePreviousImage}
-                    aria-label="Previous image"
-                  >
-                    ‹
-                  </button>
-                  <button
-                    type="button"
-                    className="project-detail-media-nav next"
-                    onClick={handleNextImage}
-                    aria-label="Next image"
-                  >
-                    ›
-                  </button>
-                </>
-              )}
-            </div>
-
-            {galleryImages.length > 1 && (
-              <div className="project-detail-thumbnails">
-                {galleryImages.map((src, index) => (
-                  <button
-                    key={`${src}-${index}`}
-                    type="button"
-                    className={`project-detail-thumb ${index === activeImageIndex ? 'active' : ''}`}
-                    style={{ backgroundImage: `url(${src})` }}
-                    onClick={() => handleSelectImage(index)}
-                    aria-label={`Show image ${index + 1}`}
-                  />
-                ))}
-              </div>
-            )}
-          </div>
-
-          <div className="project-detail-content">
-            <h2>Overview</h2>
-            <p>{project.description}</p>
-
-            {project.tech && project.tech.length > 0 && (
-              <div className="project-detail-tech">
-                <strong>Tech stack:</strong> {project.tech.join(' · ')}
-              </div>
-            )}
-
-            <div className="project-detail-buttons">
-              {project.siteUrl && (
-                <Button buttonStyle="btn--credential" buttonSize="btn--large" linkTo={project.siteUrl} external>
-                  View Website
-                </Button>
-              )}
-              {project.githubUrl && (
-                <Button buttonStyle="btn--outline" buttonSize="btn--large" linkTo={project.githubUrl} external>
-                  View GitHub
-                </Button>
-              )}
-            </div>
-
-            <Link to="/projects" className="project-detail-back-link">
-              ← Back to all projects
-            </Link>
-          </div>
+        {/* Overview */}
+        <div className="pd-section">
+          <span className="pd-section-label">Overview</span>
+          <h2 className="pd-section-title">About this project</h2>
+          <p className="pd-section-text">{project.description}</p>
         </div>
+
+        {/* Impact */}
+        {project.impact && project.impact.length > 0 && (
+          <div className="pd-section">
+            <span className="pd-section-label">Impact</span>
+            <div className="pd-impact-grid">
+              {project.impact.map((item, i) => (
+                <div key={i} className="pd-impact-card">
+                  <div className="pd-impact-stat">{item.stat}</div>
+                  <p className="pd-impact-desc">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* My Role */}
+        {project.role && (
+          <div className="pd-section">
+            <span className="pd-section-label">My role</span>
+            <div className="pd-role-row">
+              <h2 className="pd-section-title">{project.role}</h2>
+              {project.roleType && (
+                <span className="pd-role-badge">{project.roleType}</span>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* Tech Stack */}
+        {project.tech && project.tech.length > 0 && (
+          <div className="pd-section">
+            <span className="pd-section-label">Tech stack</span>
+            <div className="pd-tech-pills">
+              {project.tech.map((t) => (
+                <span key={t} className="pd-tech-pill">{t}</span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Actions */}
+        <div className="pd-section pd-section--actions">
+          {project.siteUrl && (
+            <Button buttonStyle="btn--credential" buttonSize="btn--large" linkTo={project.siteUrl} external>
+              View live site
+            </Button>
+          )}
+          {project.githubUrl && (
+            <Button buttonStyle="btn--outline" buttonSize="btn--large" linkTo={project.githubUrl} external>
+              View GitHub
+            </Button>
+          )}
+          <Link to="/projects" className="pd-back-inline">← Back to all projects</Link>
+        </div>
+
       </div>
 
       <Footer />

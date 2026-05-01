@@ -80,7 +80,6 @@ h1 {
 .featured--visible .featured_card_wrap {
   opacity: 1;
   transform: translateY(0);
-  /* individual delays are set via inline style on the element */
 }
 
 /* ── individual card sizing ── */
@@ -192,7 +191,31 @@ h1 {
 
 /* ── mobile ── */
 @media only screen and (max-width: 767px) {
-  .featured_card_wrap { width: 90%; margin: 0 auto 1.5rem; }
-  .featured_cards__item { width: 100%; max-width: none; }
+  .featured_cards__container {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .featured_card_wrap {
+    width: 100%;
+    margin: 0 0 0.75rem;
+  }
+
+  .featured_cards__item {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    height: auto;
+  }
+
+  .featured_cards__wrapper {
+    margin: 24px 0 2px;
+  }
+
+  .featured_view_all {
+    margin-top: 1.25rem;
+  }
+
   .featured_text { font-size: 1.8rem !important; }
 }
