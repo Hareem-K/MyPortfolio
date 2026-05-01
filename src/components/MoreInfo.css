@@ -1,58 +1,103 @@
 #more-info {
-    background-color: var(--primary);
-    padding: 60px 20px;
-    display: flex;
-    justify-content: center;
+  background-color: var(--primary);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .about-wrapper {
-    max-width: 1100px;   /* keeps everything centered and contained */
-    width: 100%;
-    margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ── photo: slides in from left ── */
+.about-image {
+  opacity: 0;
+  transform: translateX(-48px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition-delay: 0.05s;
+}
+
+/* ── text: slides in from right ── */
+.about-text {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(48px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition-delay: 0.2s;
+}
+
+/* triggered by JS adding .about-content--visible */
+.about-content--visible .about-image,
+.about-content--visible .about-text {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .about-content {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
 }
 
-/* Image */
+/* ── photo ── */
 .about-image .image {
-    width: 375px;
-    height: 375px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
 
-/* Text */
-.about-text {
-    flex: 1;
+.about-image .image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+}
+
+/* ── eyebrow label ── */
+.about-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.45);
+  margin-bottom: 0.75rem;
 }
 
 .about-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+  font-size: 2.2rem;
+  margin-bottom: 1.25rem;
+  color: var(--darkRed);
+  line-height: 1.2;
 }
 
 .about-text p {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 1.1rem;
+  color: #3a2a1a;
 }
 
-/* Mobile Layout */
+/* ── mobile ── */
 @media (max-width: 900px) {
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        text-align: center;
-    }
-
-    .about-image .image {
-        margin: 0 auto;
-    }
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 36px;
+  }
+  /* on mobile, slide up instead of sideways */
+  .about-image,
+  .about-text {
+    transform: translateY(32px);
+    transition-delay: 0s;
+  }
+  .about-content--visible .about-image,
+  .about-content--visible .about-text {
+    transform: translateY(0);
+  }
+  .about-text { text-align: center; }
+  .about-image .image { margin: 0 auto; }
+  .about-image .image { width: 240px; height: 240px; }
 }

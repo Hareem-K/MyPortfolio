@@ -1,3 +1,10 @@
+/* ─────────────────────────────────────────
+   Experience.css  –  redesigned layout
+   Palette: --primary (beige), --white, --black, --darkRed
+───────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
 body {
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -8,32 +15,128 @@ body {
     box-sizing: border-box;
 }
 
-.work {
-    background-color: var(--primary);
-    color: var(--darkRed);
-    padding-bottom: 2% !important;
-    padding-top: 1%;
+/* ── Hero Banner ── */
+.experience-hero {
+    background-image: url('/public/images/waves.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 340px;
+    padding: 5rem 5%;
 }
 
+.experience-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+}
+
+.experience-hero__inner {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    max-width: 700px;
+}
+
+/* Eyebrow label — matches "CURRICULUM VITAE" / "LET'S CONNECT" style */
+.experience-hero__eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--darkRed);
+    opacity: 0.7;
+    margin: 0 0 1rem;
+    display: block;
+}
+
+/* Large serif display title — matches Projects & Resume pages */
+.experience-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 700;
+    color: var(--darkRed);
+    letter-spacing: -0.01em;
+    margin: 0 0 0.15em;
+    line-height: 1.05;
+}
+
+/* Italic second line — matches "experiments" italic on Projects page */
+.experience-hero__title em {
+    font-style: italic;
+    font-weight: 400;
+    display: block;
+}
+
+.experience-hero__sub {
+    font-size: 1rem;
+    color: var(--darkRed);
+    margin: 1rem 0 0;
+    opacity: 0.75;
+    max-width: 420px;
+    line-height: 1.6;
+}
+
+/* ── Shared section wrapper ── */
+.exp-section {
+    padding: 4rem 1.5rem 5rem;
+}
+
+.exp-section--work {
+    background-color: var(--primary);
+}
+
+.exp-section--awards {
+    background-color: var(--white);
+}
+
+.exp-section__inner {
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+/* ── Section header: numbered label + title ── */
+.exp-section__header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid var(--darkRed);
+    padding-bottom: 0.75rem;
+}
+
+.exp-section__label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--darkRed);
+    opacity: 0.55;
+    flex-shrink: 0;
+}
+
+.exp-section__title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--darkRed);
+    margin: 0;
+    text-align: left;
+}
+
+/* ── Thin divider between sections ── */
+.exp-divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+/* ── Legacy overrides kept for slideshow compat ── */
 .awards-title {
     color: var(--black);
-}
-
-.credentials {
-    background-color: var(--white);
-    color: var(--black);
-    padding-top: 1px; /* Add space inside the div at the top */
-    padding-bottom: 20px; /* Add space inside the div at the bottom */
-    margin-top: 30px; /* Adds space above the div */
-    margin-bottom: 30px; /* Adds space below the div */
-}
-
-
-.courses {
-    background-color: var(--primary);
-    color: var(--darkRed);
-    margin-bottom: 2%;
-    margin-top: 1%;
 }
 
 .text-container {
@@ -42,15 +145,15 @@ body {
 
 .circle-list {
     list-style-type: circle;
-    margin-left: 20px; /* Adjust the margin as needed */
+    margin-left: 20px;
 }
 
 .experience-item {
-    margin-bottom: 20px; /* Adjust the margin between items as needed */
+    margin-bottom: 20px;
 }
 
 .education-title {
-    margin-top: 20px; /* Add space above the role title */
+    margin-top: 20px;
 }
 
 .edu_date {
@@ -59,6 +162,7 @@ body {
     float: right;
 }
 
+/* ── Responsive ── */
 @media only screen and (max-width: 1000px) {
     .education-title {
         display: flex;
@@ -71,25 +175,37 @@ body {
     }
 }
 
-/* Mobile screens (< 768px) */
 @media only screen and (max-width: 767px) {
-    .experience {
-        font-size: 4.1rem !important;
+    .experience-hero {
+        padding: 4rem 1.25rem;
+        min-height: 260px;
+    }
+
+    .experience-hero__title {
+        font-size: 3rem;
+    }
+
+    .experience-hero__sub {
+        font-size: 0.9rem;
+    }
+
+    .exp-section {
+        padding: 3rem 1rem 4rem;
+    }
+
+    .exp-section__title {
+        font-size: 1.4rem;
     }
 
     .Study_Abroad_Title {
         display: flex;
-        flex-direction: column; /* Stack the content vertically */
-        align-items: flex-start; /* Align content to the left */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .small_date {
-        margin-top: 5px; /* Add some space above the date */
-        font-size: 1rem; /* Adjust font size for mobile */
-        color: var(--darkRed); /* Keep consistent styling */
-    }
-
-    .work {
-        padding-bottom: 4% !important;
+        margin-top: 5px;
+        font-size: 1rem;
+        color: var(--darkRed);
     }
 }

@@ -1,18 +1,23 @@
-// Projects.js
 import React, { useEffect } from 'react';
 import '../../App.css';
 import ProjectCards from '../ProjectCards';
+import ProjectsHero from '../ProjectsHero';
 import Footer from '../Footer';
+import projects from '../projectData';
 
 export default function Projects() {
     useEffect(() => {
-        // Scroll to the top when the component mounts
         window.scrollTo(0, 0);
     }, []);
 
+    const categoryCount = 5; // All, Gen AI, Full-Stack, Frontend, Backend & Data
+
     return (
         <>
-            <h1 className='projects'>PROJECTS</h1>
+            <ProjectsHero
+                projectCount={projects.length}
+                categoryCount={categoryCount}
+            />
             <ProjectCards />
             <Footer />
         </>
