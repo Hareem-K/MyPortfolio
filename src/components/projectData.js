@@ -1,6 +1,25 @@
 
 const projects = [
   {
+    slug: 'repo-mind',
+    label: 'RepoMind',
+    summary: 'AI-powered codebase analyzer using RAG — ask any question about any GitHub repo.',
+    description:
+      'RepoMind is a full-stack AI tool that lets you drop in any public GitHub repository URL and instantly get a comprehensive analysis of its architecture, tech stack, code flow, and key components. Built on a Retrieval-Augmented Generation (RAG) pipeline — it clones the repo, chunks and embeds the source files into a vector store, then uses Claude Sonnet to answer questions grounded in the actual code. Features include a live Q&A chat, repo stats, language breakdown, README preview, PDF export, shareable analysis links, and a session history sidebar.',
+    role: 'Full-stack Developer & AI Engineer',
+    roleType: 'Solo project',
+    impact: [
+      { stat: 'RAG', desc: 'Built a full retrieval-augmented generation pipeline from scratch using LangChain, ChromaDB, and HuggingFace embeddings' },
+      { stat: 'Full-stack', desc: 'End-to-end ownership from FastAPI backend to React frontend, deployed on Render and Netlify' },
+    ],
+    githubUrl: 'https://github.com/Hareem-K/codebase-analyzer',
+    siteUrl: 'https://github.com/Hareem-K/codebase-analyzer',
+    tech: ['React', 'Python', 'FastAPI', 'LangChain', 'ChromaDB', 'Claude API', 'HuggingFace'],
+    images: ['/images/RepoMind_1.png', '/images/RepoMind_2.png', '/images/RepoMind_3.png'],
+    categories: ['fullstack', 'ai'],
+    featured: true,
+  },
+  {
     slug: 'lalalu-skin-laser',
     label: 'Lalalu Skin & Laser',
     summary: 'Full-stack spa booking site built with React, TypeScript, and Tailwind.',
