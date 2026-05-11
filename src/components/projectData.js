@@ -13,7 +13,7 @@ const projects = [
       { stat: 'Full-stack', desc: 'End-to-end ownership from FastAPI backend to React frontend, deployed on Render and Netlify' },
     ],
     githubUrl: 'https://github.com/Hareem-K/codebase-analyzer',
-    siteUrl: 'https://github.com/Hareem-K/codebase-analyzer',
+    siteUrl: 'https://repomindanalyzer.netlify.app/',
     tech: ['React', 'Python', 'FastAPI', 'LangChain', 'ChromaDB', 'Claude API', 'HuggingFace'],
     images: ['/images/RepoMind_1.png', '/images/RepoMind_2.png', '/images/RepoMind_3.png'],
     categories: ['fullstack', 'ai'],
