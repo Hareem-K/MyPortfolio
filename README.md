@@ -27,6 +27,3 @@ A personal portfolio website built with React, showcasing projects, work experie
 
 ---
 
-## License
-
-This project is for personal/portfolio use. Feel free to use it as inspiration for your own portfolio — just swap out the content.
