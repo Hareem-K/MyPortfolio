@@ -28,8 +28,8 @@ export default function SendMessage() {
         setLoading(true);
 
         emailjs.send(
-            'service_xcmuprg',
-            'template_wbmtvuc',
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
             {
                 from_name: formData.name,
                 from_email: formData.email,
@@ -37,7 +37,7 @@ export default function SendMessage() {
                 phone: formData.phone,
                 message: formData.message,
             },
-            'jTgMDDl0Gh9lXuOh5'
+            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
         )
         .then(() => {
             alert('Message sent successfully!');
