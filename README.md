@@ -26,4 +26,3 @@ A personal portfolio website built with React, showcasing projects, work experie
 - **CSS** — custom styling with CSS variables; no UI framework
 
 ---
-
