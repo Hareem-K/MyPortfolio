@@ -17,6 +17,18 @@ function AwardsSlideshow() {
 
   const awards = [
     {
+      image: "/images/Experience/google_ai_essentials.png",
+      title: "Google AI Essentials | Google | Coursera",
+      date: "July 2026",
+      details: [
+        "Those who earn the Google AI Essentials Certificate, developed by Google, have demonstrated their competence in integrating AI into their work. Through hands-on activities and assessments, graduates develop a foundational understanding of AI principles and practical proficiency in applying generative AI tools to workplace tasks, including writing effective prompts and using AI responsibly."
+      ],
+      button: {
+        text: "View Credential",
+        link: "https://www.credly.com/badges/927c10be-454c-40ee-a14a-e509e2dbe67c/public_url"
+      }
+    },
+    {
       image: "/images/Experience/Schulich.png",
       title: "Global Experience in Software Engineering | University of Calgary (Cambridge, UK)",
       date: "Feb 2025",
