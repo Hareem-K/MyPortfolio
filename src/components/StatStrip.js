@@ -50,7 +50,7 @@ function StatStrip() {
 
   const stats = [
     { num: 14, suffix: '+', label: 'Projects shipped', delay: 0 },
-    { num: 4,  suffix: '+', label: 'Years of experience', delay: 100 },
+    { num: 5,  suffix: '+', label: 'Years of experience', delay: 100 },
     { num: 'MEng', label: 'Grad degree in progress', isText: true, delay: 200 },
     { num: 'UI/UX', label: 'Design-first approach', isText: true, delay: 300 },
   ];
