@@ -14,7 +14,7 @@ const projects = [
     ],
     githubUrl: 'https://github.com/Hareem-K/codebase-analyzer',
     siteUrl: 'https://repomindanalyzer.netlify.app/',
-    tech: ['React', 'Python', 'FastAPI', 'LangChain', 'ChromaDB', 'Claude API', 'HuggingFace'],
+    tech: ['React', 'Python', 'FastAPI', 'LangChain', 'ChromaDB', 'Claude API', 'HuggingFace', 'Prompt Engineering'],
     images: ['/images/RepoMind_1.png', '/images/RepoMind_2.png', '/images/RepoMind_3.png'],
     categories: ['fullstack', 'ai'],
     featured: true,
