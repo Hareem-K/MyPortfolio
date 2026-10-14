@@ -18,7 +18,7 @@ export default function Resume() {
     'https://drive.google.com/file/d/1RTFkx5pG3rKWK7wd4ZqK0q-x1pCOUR9L/view?usp=sharing';
 
   const highlights = [
-    { label: 'Years of Experience', value: '4+' },
+    { label: 'Years of Experience', value: '5+' },
     { label: 'Projects Completed', value: '14+' },
     { label: 'Technologies', value: '20+' },
     { label: 'Awards & Credentials', value: '7' },
@@ -131,7 +131,7 @@ export default function Resume() {
             <div className="resume-edu-item">
               <div className="resume-edu-item__degree">BSc — Software Engineering</div>
               <div className="resume-edu-item__school">University of Calgary</div>
-              <div className="resume-edu-item__detail">Graduated 2024</div>
+              <div className="resume-edu-item__detail">Graduated 2025</div>
             </div>
           </div>
 
